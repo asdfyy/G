@@ -1,1 +1,416 @@
-a
+%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js", :type => "text/javascript"}
+
+
+.header
+  .header__top
+    .logo
+      = link_to "/", class: "gottuanlogo" do
+        ごっつ庵
+    .kennsakumado
+      .kennsakumado__omotikaeri
+        = link_to "/basicpages/omotikaeri" do
+          お持ち帰り予約承っております！！
+
+    .user
+      - if user_signed_in?
+        .loginstatus
+          ごっつぁんです！#{current_user.name} さん
+        .logout
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+      - else
+        .loginstasus
+          未ログイン
+        %a.sinki{href: new_user_registration_path}
+          新規登録
+        %a.login{href: new_user_session_path}
+          ログイン
+
+  .header__tel
+    TEL 01-1111-1111
+
+  .header__tab
+    .tab1
+      .taboya
+        こだわり
+      .tabko
+        .dasi
+          = link_to "/basicpages/sinnkitouroku" do
+            だし
+        .yasai
+          = link_to "/basicpages/tyuukannpage" do
+            野菜
+        .sake
+          = link_to "/basicpages/tyuukannpage" do
+            酒
+        .sime
+          = link_to "/basicpages/index" do
+            シメ
+        
+    .tab2
+      メニュー
+      .tabkiti
+        = link_to "/access" do
+          こんにちはタブ吉です
+      .tabmi
+        = link_to "/basicpages/sinnkitouroku" do
+          一品もの
+        .tabchan1
+          = link_to "/basicpages/tyuukannpage" do
+            タブちゃんです
+        .tabchan2
+          = link_to "/basicpages/tyuukannpage" do
+            うほ
+        .tabchan3
+          = link_to "/basicpages/tyuukannpage" do
+            うほちゃんです
+      .tabjiro
+        = link_to "/access" do
+          こんにちはタブ次郎です
+        .baki
+          = link_to "/basicpages/haisouryou" do
+            地下チャンプ
+        .kaiou
+          = link_to "/taisyou" do
+            一向ににかまわんッッ
+        .hanayama
+          = link_to "/taisyou" do
+            花山薫（１９）
+        .sibukawa
+          = link_to "/taisyou" do
+            柔術
+
+      .tabemon
+        = link_to "/access" do
+          ぼくたぶえもんです
+        .tabta
+          = link_to "/basicpages/haisouryou" do
+            のびのびた
+        .tabkachan
+          = link_to "/taisyou" do
+            みなもとのよしつね
+        .jaian
+          = link_to "/taisyou" do
+            ガキ大将
+        .tabo
+          = link_to "/taisyou" do
+            かっぱ
+        .tabsugikun
+          = link_to "/taisyou" do
+            できすぎやろ
+
+    .tab3
+      = link_to "/access" do
+        アクセス
+    .tab4
+      = link_to "/taisyou" do
+        店主について
+
+.gazoukurukuru
+  .syasinn
+    <img src="/assets/1on.jpg" class=bigimage>
+  .syasinn
+    <img src="/assets/2on.jpg" class=bigimage>
+  .syasinn
+    <img src="/assets/3on" class=bigimage>
+.itiran
+  .itiran__pickup
+    ピックアップ
+  .itiran__gazou
+
+    -# .a
+    -#   <img src="/assets/1.jpg" class=image>
+    -#   .asetumei
+    -#     aaaaaaaaaaaaaaaaaaaaaaaa
+    -#     %br
+    -#     購入する
+    -#     %br
+    -#     カートに入れる
+    .b
+      .bsetumei
+        旬の野菜販売してます！！
+      .bgazou
+        <img src="/assets/1on.jpg" class=image>
+    .c
+      .csetumei
+        お持ち帰りについて
+      .cgazou
+        <img src="/assets/2on.jpg" class=image>
+    .d
+      .dsetumei
+        お持ち帰り予約はこちら！
+      .dgazou
+        <img src="/assets/1on.jpg" class=image>
+    -# .e
+    -#   <img src="/assets/3.jpg" class=image>
+    -# .f
+    -#   <img src="/assets/3on.jpg" class=image>
+    -# .g
+    -#   <img src="/assets/sample1" class=image>
+    -# .h
+    -#   <img src="/assets/sample2_mini" class=image>
+    -# .i
+    -#   <img src="/assets/sample3_mini" class=image>
+
+.footer
+  .abc
+    .abc__abc
+      コピーライト
+    .abc__logo
+      <img src="/assets/1on.jpg" class=image>
+  .abcd
+    .abcd__abcd
+      TEL(01-1111-1111)
+    .abcd__abcde
+      RECRUIT
+
+  -# .abcdef
+  -#   .abcdef__abcdef
+  -#     あああああ
+  -#   .abcdef__abcdef
+  -#     いいいいいい
+  -#   .abcdef__abcdef
+  -#     うううううう
+  -#   .abcdef__abcdef
+  -#     ええええええ
+
+
+:javascript
+    $(function(){
+      $(".tab1 .taboya").on("click", function() {
+      $(this).nextAll().slideToggle(100);
+      });
+    });
+    $(function(){
+      $(".tab1 .taboya").on("click", function() {
+      $(this).css('color', '#0000ff')
+      });
+    });
+    $('.tab1').hover(
+    function(){
+      $('.taboya').css();
+      },
+    function(){
+      $('.taboya').css('color', '');
+      }
+    );
+
+
+    $('.yasai').hover(
+    function(){
+      $('.yasai').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+
+      },
+    function(){
+      $('.yasai').css('background-color', '');
+      }
+    );
+    $('.sake').hover(
+    function(){
+      $('.sake').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.sake').css('background-color', '');
+      }
+    );
+    $('.dasi').hover(
+    function(){
+      $('.dasi').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.dasi').css('background-color', '');
+      }
+    );
+    $('.sime').hover(
+    function(){
+      $('.sime').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.sime').css('background-color', '');
+      }
+    );
+
+
+
+
+    $('.tab2').hover(
+      function(){
+        $('.tab2').children().show();
+        $('.tab2').css('color', '#0000ff');
+
+      },
+      function(){
+        $('.tab2').children().hide();
+        $('.tab2').css('color', '');
+
+      }
+    );
+
+    $('.tabkiti').hover(
+      function(){
+        $('.tabkiti').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabkiti').css('background-color', '');
+      }
+    );
+
+
+
+    $('.tabmi').hover(
+      function(){
+        $('.tabmi').children().show();
+        $('.tabmi').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabmi').css('background-color', '');
+        $('.tabchan1').hide();
+        $('.tabchan2').hide();
+        $('.tabchan3').hide();
+      }
+    );
+    $('.tabchan1').hover(
+      function(){
+        $('.tabchan1').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan1').css('background-color', '');
+      }
+    );
+    $('.tabchan2').hover(
+      function(){
+        $('.tabchan2').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan2').css('background-color', '');
+      }
+    );
+    $('.tabchan3').hover(
+      function(){
+        $('.tabchan3').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan3').css('background-color', '');
+      }
+    );
+
+
+    $('.tabjiro').hover(
+      function(){
+        $('.tabjiro').children().show();
+        $('.tabjiro').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabjiro').css('background-color', '');
+        $('.baki').hide();
+        $('.kaiou').hide();
+        $('.hanayama').hide();
+        $('.sibukawa').hide();
+
+      }
+    );
+    $('.baki').hover(
+      function(){
+        $('.baki').css('background-color', '#f00');
+      },
+      function(){
+        $('.baki').css('background-color', '');
+      }
+    );
+    $('.kaiou').hover(
+      function(){
+        $('.kaiou').css('background-color', '#f00');
+      },
+      function(){
+        $('.kaiou').css('background-color', '');
+      }
+    );
+    $('.hanayama').hover(
+      function(){
+        $('.hanayama').css('background-color', '#f00');
+      },
+      function(){
+        $('.hanayama').css('background-color', '');
+      }
+    );
+    $('.sibukawa').hover(
+      function(){
+        $('.sibukawa').css('background-color', '#f00');
+      },
+      function(){
+        $('.sibukawa').css('background-color', '');
+      }
+    );
+
+
+    $('.tabemon').hover(
+      function(){
+        $('.tabemon').children().show();
+        $('.tabemon').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabemon').css('background-color', '');
+        $('.tabta').hide();
+        $('.tabkachan').hide();
+        $('.jaian').hide();
+        $('.tabo').hide();
+        $('.tabsugikun').hide();
+      }
+    );
+    $('.tabta').hover(
+      function(){
+        $('.tabta').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabta').css('background-color', '');
+      }
+    );
+    $('.tabkachan').hover(
+      function(){
+        $('.tabkachan').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabkachan').css('background-color', '');
+      }
+    );
+    $('.jaian').hover(
+      function(){
+        $('.jaian').css('background-color', '#f00');
+      },
+      function(){
+        $('.jaian').css('background-color', '');
+      }
+    );
+    $('.tabo').hover(
+      function(){
+        $('.tabo').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabo').css('background-color', '');
+      }
+    );
+    $('.tabsugikun').hover(
+      function(){
+        $('.tabsugikun').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabsugikun').css('background-color', '');
+      }
+    );
+
+
+
+:javascript
+  $(function() {
+      $('.gazoukurukuru').slick({
+          dots: true,
+          fade: true,
+          autoplay: true,
+          autoplaySpeed: 4000,
+      });
+  });
+

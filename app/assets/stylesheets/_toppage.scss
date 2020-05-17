@@ -1,0 +1,399 @@
+
+.header {
+  height: 18vh;
+  background-color: white;
+  a{
+    display: block;
+    text-decoration: none;
+  }
+  a:visited{
+    color: black;
+  }
+  a:link{
+    color: black;
+  }
+  .gottuanlogo{
+  }
+  &__top{
+    height: 6vh;
+    display: flex;
+    padding-left: 3%;
+    padding-right: 3%;
+    .logo {
+      height: 10vh;
+      line-height: 10vh;
+      width: 15%;
+      margin-top: 1%;
+      background-color: rgb(33, 30, 132);
+      text-align: center;
+      border-radius: 100px;
+    }
+    .kennsakumado{
+      // background-color: yellowgreen;
+      text-align: center;
+      width: 50%;
+      margin-top: 1%;
+      margin-left: 20%;
+      &__omotikaeri{
+        height: 6vh;
+        width: 33.5vw;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 6vh;
+        // background-color: moccasin;
+        font-size: 30px;
+      }
+    
+    }
+    .user{
+      // background-color: yellow;
+      margin-top: 1%;
+      text-align: center;
+      width: 35%;
+      .loginstatus{
+      }
+      .sinki{
+      }
+      .login{
+      }
+    }
+  }
+  &__tel{
+    text-align: center;
+    padding-top: 2.4vh;
+    font-size: 20px;
+  }
+
+  &__tab{
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    font-size: 100%;
+    .tab1{
+      width: 25%;
+      line-height: 6vh;
+      text-align: center;
+      cursor: pointer;
+      z-index: 100;
+    }
+      .taboya{
+        position: relative;
+      }
+      .tabko{
+        position: absolute;
+        width: 25%;
+        line-height: 6vh;
+        text-align: center;
+        display: none;
+        .dasi{
+          background-color: white;
+        }
+        .yasai{
+          background-color: white;
+        }
+        .sake{
+          background-color: white;
+        }
+        .sime{
+          background-color: white;
+        }
+      }
+
+      
+    .tab2{
+      width: 25%;
+      height: 6vh;
+      line-height: 6vh;
+      text-align: center;
+      z-index: 100;
+    }
+        .tabkiti{
+          background-color: white;
+          display: none;
+        }
+
+        .tabmi{
+          position: relative;
+          background-color: white;
+          display: none;
+        }
+            .tabchan1{
+              display: none;
+              height: 5vh;
+              width: 100%;
+              position: absolute;
+              background-color: white;
+              top: 0;
+              left: 100%;
+            }
+            .tabchan2{
+              display: none;
+              height: 5vh;
+              width: 100%;
+              position: absolute;
+              background-color: white;
+              top: 84%;
+              left: 100%;
+            }
+            .tabchan3{
+              display: none;
+              height: 5vh;
+              width: 100%;
+              position: absolute;
+              background-color: white;
+              top: 168%;
+              left: 100%;
+            }
+
+
+        .tabjiro{
+          position: relative;
+          background-color: white;
+          display: none;
+        }
+            .baki{
+              position: absolute;
+              top: 0;
+              left: 100%;
+              height: 5vh;
+              width: 100%;
+              line-height: 5vh;
+              text-align:center;
+              display: none;
+              background-color: white;
+            }
+            .kaiou{
+              position: absolute;
+              top: 84%;
+              left: 100%;
+              height: 5vh;
+              width: 100%;
+              line-height: 5vh;
+              text-align: center;
+              display: none;
+              background-color: white;
+            }
+            .hanayama{
+              position: absolute;
+              top: 168%;
+              left: 100%;
+              height: 5vh;
+              width: 100%;
+              line-height: 5vh;
+              text-align: center;
+              display: none;
+              background-color: white;
+            }
+            .sibukawa{
+              position: absolute;
+              top: 252%;
+              left: 100%;
+              height: 5vh;
+              width: 100%;
+              line-height: 5vh;
+              text-align: center;
+              display: none;
+              background-color: white;
+            }
+
+        .tabemon{
+          position: relative;
+          background-color: white;
+          display: none;
+        }
+            .tabta{
+              display: none;
+              height: 5vh;
+              width: 100%;
+              position: absolute;
+              background-color: white;
+              top: 0;
+              left: 100%;
+            }
+            .tabkachan{
+              display: none;
+              height: 5vh;
+              width: 100%;
+              position: absolute;
+              background-color: white;
+              top: 84%;
+              left: 100%;
+            }
+            .jaian{
+              display: none;
+              height: 5vh;
+              width: 100%;
+              position: absolute;
+              background-color: white;
+              top: 168%;
+              left: 100%;
+            }
+            .tabo{
+              display: none;
+              height: 5vh;
+              width: 100%;
+              position: absolute;
+              background-color: white;
+              top: 252%;
+              left: 100%;
+            }
+            .tabsugikun{
+              display: none;
+              height: 5vh;
+              width: 100%;
+              position: absolute;
+              background-color: white;
+              top: 335%;
+              left: 100%;
+            }
+
+
+
+
+    .tab3{
+      width: 25%;
+      line-height: 6vh;
+      text-align: center;
+    }
+    .tab4{
+      width: 25%;
+      line-height: 6vh;
+      text-align: center;
+
+    }
+  }
+}
+.gazoukurukuru{
+  height: 60vh;
+  // line-height: 15vh;
+  .bigimage{
+    height: 60vh;
+    width: 100%;
+  }
+}
+
+
+.itiran{
+  .image{
+    height: 40vh;
+    width: 40vh;
+  }
+  &__pickup{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
+  }
+  &__gazou{
+    // カルーセルのドットの空間利用でtopの位置調整
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    // .a{
+    //   width: 20vh;
+    //   background-color: blanchedalmond;
+    //   .asetumei{
+    //     word-break: break-all;
+    //     text-align: center;
+    //   }
+    // }
+    .b{
+      .bsetumei{
+        margin-bottom: 1vh;
+
+        word-break: break-all;
+        text-align: center;
+      }
+    }
+    .c{
+      .csetumei{
+        margin-bottom: 1vh;
+        word-break: break-all;
+        text-align: center;
+      }
+    }
+    .d{
+      .dsetumei{
+        margin-bottom: 1vh;
+        word-break: break-all;
+        text-align: center;
+      }
+    }
+    // .e{
+    //   background-color: blanchedalmond;
+    //   .esetumei{
+    //     word-break: break-all;
+    //     text-align: center;
+    //   }
+    // }
+    // .f{
+    //   background-color: red;
+    //   .fsetumei{
+    //     word-break: break-all;
+    //     text-align: center;
+    //   }
+    // }
+    // .g{
+    //   background-color: blanchedalmond;
+    //   .gsetumei{
+    //     word-break: break-all;
+    //     text-align: center;
+    //   }
+    // }
+    // .h{
+    //   background-color: red;
+    //   .hsetumei{
+    //     word-break: break-all;
+    //     text-align: center;
+    //   }
+    // }
+    // .i{
+    //   background-color: blanchedalmond;
+    //   .isetumei{
+    //     word-break: break-all;
+    //     text-align: center;
+    //   }
+    // }
+  }
+}
+
+.footer{
+  height: 180px;
+  text-align: center;
+  padding-top: 40px;
+  .abc{
+    &__abc{
+    }
+    &__logo{
+      .image{
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  .abcd{
+    display: flex;
+    justify-content: center;
+    &__abcd{
+      width: 160px;
+      padding-right: 20px;
+    }
+    &__abcde{
+      width: 160px;
+
+    }
+  }
+//   .abcde{
+//     &__abcde{
+//       margin-left: 100px;
+
+//     }
+//   }
+//   .abcdef{
+//     .abcdef__abcdef{
+//       margin-left: 100px;
+
+//     }
+//   }
+}
