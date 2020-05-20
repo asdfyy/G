@@ -5,11 +5,85 @@
     .header__top
       .logo
         = link_to "/", class: "gottuanlogo" do
-          ごっつ庵
+          <img src="/assets/1on.jpg" class=image>
       .kennsakumado
-        .kennsakumado__omotikaeri
-          = link_to "/basicpages/omotikaeri" do
-            当店は予約して欲しい制です！！
+        -# .kennsakumado__omotikaeri
+        -#   = link_to "/basicpages/omotikaeri" do
+        .tel
+          当店は予約して欲しい制です！！
+        .header__tab
+          .tab1
+            .taboya
+              こだわり
+            .tabko
+              .dasi
+                = link_to "/basicpages/sinnkitouroku" do
+                  だし
+              .yasai
+                = link_to "/basicpages/tyuukannpage" do
+                  野菜
+              .sake
+                = link_to "/basicpages/tyuukannpage" do
+                  酒
+              .sime
+                = link_to "/basicpages/index" do
+                  シメ
+          .tab2
+            メニュー
+            .tabkiti
+              = link_to "/tyannko" do
+                ちゃんこ鍋
+            .tabmi
+              = link_to "/basicpages/sinnkitouroku" do
+                一品もの
+              .tabchan1
+                = link_to "/basicpages/tyuukannpage" do
+                  タブちゃんです
+              .tabchan2
+                = link_to "/basicpages/tyuukannpage" do
+                  うほ
+              .tabchan3
+                = link_to "/basicpages/tyuukannpage" do
+                  うほちゃんです
+            .tabjiro
+              = link_to "/access" do
+                こんにちはタブ次郎です
+              .baki
+                = link_to "/basicpages/haisouryou" do
+                  地下チャンプ
+              .kaiou
+                = link_to "/taisyou" do
+                  一向ににかまわんッッ
+              .hanayama
+                = link_to "/taisyou" do
+                  花山薫（１９）
+              .sibukawa
+                = link_to "/taisyou" do
+                  柔術
+            .tabemon
+              = link_to "/access" do
+                ぼくたぶえもんです
+              .tabta
+                = link_to "/basicpages/haisouryou" do
+                  のびのびた
+              .tabkachan
+                = link_to "/taisyou" do
+                  みなもとのよしつね
+              .jaian
+                = link_to "/taisyou" do
+                  ガキ大将
+              .tabo
+                = link_to "/taisyou" do
+                  かっぱ
+              .tabsugikun
+                = link_to "/taisyou" do
+                  できすぎやろ
+          .tab3
+            = link_to "/access" do
+              アクセス
+          .tab4
+            = link_to "/taisyou" do
+              店主について
 
       .user
         - if user_signed_in?
@@ -25,85 +99,7 @@
           %a.login{href: new_user_session_path}
             ログイン
 
-    .header__tel
-      電話予約　TEL 01-1111-1111
 
-    .header__tab
-      .tab1
-        .taboya
-          こだわり
-        .tabko
-          .dasi
-            = link_to "/basicpages/sinnkitouroku" do
-              だし
-          .yasai
-            = link_to "/basicpages/tyuukannpage" do
-              野菜
-          .sake
-            = link_to "/basicpages/tyuukannpage" do
-              酒
-          .sime
-            = link_to "/basicpages/index" do
-              シメ
-          
-      .tab2
-        メニュー
-        .tabkiti
-          = link_to "/tyannko" do
-            ちゃんこ鍋
-        .tabmi
-          = link_to "/basicpages/sinnkitouroku" do
-            一品もの
-          .tabchan1
-            = link_to "/basicpages/tyuukannpage" do
-              タブちゃんです
-          .tabchan2
-            = link_to "/basicpages/tyuukannpage" do
-              うほ
-          .tabchan3
-            = link_to "/basicpages/tyuukannpage" do
-              うほちゃんです
-        .tabjiro
-          = link_to "/access" do
-            こんにちはタブ次郎です
-          .baki
-            = link_to "/basicpages/haisouryou" do
-              地下チャンプ
-          .kaiou
-            = link_to "/taisyou" do
-              一向ににかまわんッッ
-          .hanayama
-            = link_to "/taisyou" do
-              花山薫（１９）
-          .sibukawa
-            = link_to "/taisyou" do
-              柔術
-
-        .tabemon
-          = link_to "/access" do
-            ぼくたぶえもんです
-          .tabta
-            = link_to "/basicpages/haisouryou" do
-              のびのびた
-          .tabkachan
-            = link_to "/taisyou" do
-              みなもとのよしつね
-          .jaian
-            = link_to "/taisyou" do
-              ガキ大将
-          .tabo
-            = link_to "/taisyou" do
-              かっぱ
-          .tabsugikun
-            = link_to "/taisyou" do
-              できすぎやろ
-
-      .tab3
-        = link_to "/access" do
-          アクセス
-      .tab4
-        = link_to "/taisyou" do
-          店主について
 
 -# .gazoukurukuru
 -#   .syasinn

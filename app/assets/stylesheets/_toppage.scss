@@ -25,7 +25,7 @@ html, body {
     font-family: "Times New Roman", Times, "serif";
   }
   .header {
-    height: 18vh;
+    height: 11vh;
     background-color: rgba(255, 255, 255, 0.5);
     color: rgb(33, 30, 132);
     a{
@@ -38,44 +38,43 @@ html, body {
     a:link{
       color: rgb(33, 30, 132);
     }
-    .gottuanlogo{
-    }
     &__top{
-      height: 6vh;
       display: flex;
-      padding-left: 3%;
-      padding-right: 3%;
       .logo {
-        height: 10vh;
-        line-height: 10vh;
-        width: 15%;
-        margin-top: 1%;
-        background-color: rgb(255, 255, 255);
-        text-align: center;
-        border-radius: 100px;
+        height: 13vh;
+        margin: 0 auto;
+        width: 25%;
+
+        .image{
+          width: 10vh;
+          height: 10vh;
+          padding-left: 6vw;
+          margin-top: 1%;
+        }
       }
       .kennsakumado{
-        // background-color: yellowgreen;
         text-align: center;
         width: 50%;
-        margin-top: 1%;
-        margin-left: 20%;
+        margin-top: 0.5%;
         &__omotikaeri{
           height: 6vh;
           width: 33.5vw;
           text-align: center;
           margin: 0 auto;
           line-height: 6vh;
-          // background-color: moccasin;
           font-size: 30px;
         }
-      
+        .tel{
+          text-align: center;
+          font-size: 25px;
+        }
+    
       }
       .user{
         // background-color: yellow;
-        margin-top: 1%;
+        margin-top: 0.5%;
         text-align: center;
-        width: 35%;
+        width: 25%;
         .loginstatus{
         }
         .sinki{
@@ -84,20 +83,14 @@ html, body {
         }
       }
     }
-    &__tel{
-      text-align: center;
-      padding-top: 2.4vh;
-      font-size: 20px;
-    }
   
     &__tab{
-      height: 5.5vh;
+      padding-top: 2px;
+      height: 5vh;
+      line-height: 5vh;
       display: flex;
-      align-items: center;
-      font-size: 100%;
       .tab1{
         width: 25%;
-        line-height: 6vh;
         text-align: center;
         cursor: pointer;
         z-index: 100;
@@ -107,8 +100,7 @@ html, body {
         }
         .tabko{
           position: absolute;
-          width: 25%;
-          line-height: 6vh;
+          width: 12.5%;
           text-align: center;
           display: none;
           .dasi{
@@ -128,8 +120,6 @@ html, body {
         
       .tab2{
         width: 25%;
-        height: 6vh;
-        line-height: 6vh;
         text-align: center;
         z-index: 100;
       }
@@ -145,7 +135,6 @@ html, body {
           }
               .tabchan1{
                 display: none;
-                height: 5vh;
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
@@ -154,20 +143,18 @@ html, body {
               }
               .tabchan2{
                 display: none;
-                height: 5vh;
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 84%;
+                top: 4.9vh;
                 left: 100%;
               }
               .tabchan3{
                 display: none;
-                height: 5vh;
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 168%;
+                top: 9.8vh;
                 left: 100%;
               }
   
@@ -181,42 +168,34 @@ html, body {
                 position: absolute;
                 top: 0;
                 left: 100%;
-                height: 5vh;
                 width: 100%;
-                line-height: 5vh;
                 text-align:center;
                 display: none;
                 background-color: rgba(255, 255, 255, 0.5);
               }
               .kaiou{
                 position: absolute;
-                top: 84%;
+                top: 4.9vh;
                 left: 100%;
-                height: 5vh;
                 width: 100%;
-                line-height: 5vh;
                 text-align: center;
                 display: none;
                 background-color: rgba(255, 255, 255, 0.5);
               }
               .hanayama{
                 position: absolute;
-                top: 168%;
+                top: 9.8vh;
                 left: 100%;
-                height: 5vh;
                 width: 100%;
-                line-height: 5vh;
                 text-align: center;
                 display: none;
                 background-color: rgba(255, 255, 255, 0.5);
               }
               .sibukawa{
                 position: absolute;
-                top: 252%;
+                top: 14.7vh;
                 left: 100%;
-                height: 5vh;
                 width: 100%;
-                line-height: 5vh;
                 text-align: center;
                 display: none;
                 background-color: rgba(255, 255, 255, 0.5);
@@ -229,7 +208,6 @@ html, body {
           }
               .tabta{
                 display: none;
-                height: 5vh;
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
@@ -238,38 +216,34 @@ html, body {
               }
               .tabkachan{
                 display: none;
-                height: 5vh;
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 84%;
+                top: 4.9vh;
                 left: 100%;
               }
               .jaian{
                 display: none;
-                height: 5vh;
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 168%;
+                top: 9.8vh;
                 left: 100%;
               }
               .tabo{
                 display: none;
-                height: 5vh;
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 252%;
+                top: 14.8vh;
                 left: 100%;
               }
               .tabsugikun{
                 display: none;
-                height: 5vh;
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 335%;
+                top: 19.7vh;
                 left: 100%;
               }
   
@@ -278,14 +252,11 @@ html, body {
   
       .tab3{
         width: 25%;
-        line-height: 6vh;
         text-align: center;
       }
       .tab4{
         width: 25%;
-        line-height: 6vh;
         text-align: center;
-  
       }
     }
   }
@@ -294,7 +265,7 @@ html, body {
 
 .gazoukurukuru{
   height: 60vh;
-  // line-height: 15vh;
+  // line-height: 14vh;
   .bigimage{
     height: 60vh;
     width: 100%;
