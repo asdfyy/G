@@ -1,118 +1,117 @@
-%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
-%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js", :type => "text/javascript"}
+.bg-switcher
+  %h1.bg-title
 
+  .header
+    .header__top
+      .logo
+        = link_to "/", class: "gottuanlogo" do
+          ごっつ庵
+      .kennsakumado
+        .kennsakumado__omotikaeri
+          = link_to "/basicpages/omotikaeri" do
+            当店は予約して欲しい制です！！
 
-.header
-  .header__top
-    .logo
-      = link_to "/", class: "gottuanlogo" do
-        ごっつ庵
-    .kennsakumado
-      .kennsakumado__omotikaeri
-        = link_to "/basicpages/omotikaeri" do
-          お持ち帰り予約承っております！！
+      .user
+        - if user_signed_in?
+          .loginstatus
+            ごっつぁんです！#{current_user.name} さん
+          .logout
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - else
+          .loginstasus
+            未ログイン
+          %a.sinki{href: new_user_registration_path}
+            新規登録
+          %a.login{href: new_user_session_path}
+            ログイン
 
-    .user
-      - if user_signed_in?
-        .loginstatus
-          ごっつぁんです！#{current_user.name} さん
-        .logout
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
-      - else
-        .loginstasus
-          未ログイン
-        %a.sinki{href: new_user_registration_path}
-          新規登録
-        %a.login{href: new_user_session_path}
-          ログイン
+    .header__tel
+      電話予約　TEL 01-1111-1111
 
-  .header__tel
-    TEL 01-1111-1111
-
-  .header__tab
-    .tab1
-      .taboya
-        こだわり
-      .tabko
-        .dasi
+    .header__tab
+      .tab1
+        .taboya
+          こだわり
+        .tabko
+          .dasi
+            = link_to "/basicpages/sinnkitouroku" do
+              だし
+          .yasai
+            = link_to "/basicpages/tyuukannpage" do
+              野菜
+          .sake
+            = link_to "/basicpages/tyuukannpage" do
+              酒
+          .sime
+            = link_to "/basicpages/index" do
+              シメ
+          
+      .tab2
+        メニュー
+        .tabkiti
+          = link_to "/tyannko" do
+            ちゃんこ鍋
+        .tabmi
           = link_to "/basicpages/sinnkitouroku" do
-            だし
-        .yasai
-          = link_to "/basicpages/tyuukannpage" do
-            野菜
-        .sake
-          = link_to "/basicpages/tyuukannpage" do
-            酒
-        .sime
-          = link_to "/basicpages/index" do
-            シメ
-        
-    .tab2
-      メニュー
-      .tabkiti
-        = link_to "/access" do
-          こんにちはタブ吉です
-      .tabmi
-        = link_to "/basicpages/sinnkitouroku" do
-          一品もの
-        .tabchan1
-          = link_to "/basicpages/tyuukannpage" do
-            タブちゃんです
-        .tabchan2
-          = link_to "/basicpages/tyuukannpage" do
-            うほ
-        .tabchan3
-          = link_to "/basicpages/tyuukannpage" do
-            うほちゃんです
-      .tabjiro
-        = link_to "/access" do
-          こんにちはタブ次郎です
-        .baki
-          = link_to "/basicpages/haisouryou" do
-            地下チャンプ
-        .kaiou
-          = link_to "/taisyou" do
-            一向ににかまわんッッ
-        .hanayama
-          = link_to "/taisyou" do
-            花山薫（１９）
-        .sibukawa
-          = link_to "/taisyou" do
-            柔術
+            一品もの
+          .tabchan1
+            = link_to "/basicpages/tyuukannpage" do
+              タブちゃんです
+          .tabchan2
+            = link_to "/basicpages/tyuukannpage" do
+              うほ
+          .tabchan3
+            = link_to "/basicpages/tyuukannpage" do
+              うほちゃんです
+        .tabjiro
+          = link_to "/access" do
+            こんにちはタブ次郎です
+          .baki
+            = link_to "/basicpages/haisouryou" do
+              地下チャンプ
+          .kaiou
+            = link_to "/taisyou" do
+              一向ににかまわんッッ
+          .hanayama
+            = link_to "/taisyou" do
+              花山薫（１９）
+          .sibukawa
+            = link_to "/taisyou" do
+              柔術
 
-      .tabemon
+        .tabemon
+          = link_to "/access" do
+            ぼくたぶえもんです
+          .tabta
+            = link_to "/basicpages/haisouryou" do
+              のびのびた
+          .tabkachan
+            = link_to "/taisyou" do
+              みなもとのよしつね
+          .jaian
+            = link_to "/taisyou" do
+              ガキ大将
+          .tabo
+            = link_to "/taisyou" do
+              かっぱ
+          .tabsugikun
+            = link_to "/taisyou" do
+              できすぎやろ
+
+      .tab3
         = link_to "/access" do
-          ぼくたぶえもんです
-        .tabta
-          = link_to "/basicpages/haisouryou" do
-            のびのびた
-        .tabkachan
-          = link_to "/taisyou" do
-            みなもとのよしつね
-        .jaian
-          = link_to "/taisyou" do
-            ガキ大将
-        .tabo
-          = link_to "/taisyou" do
-            かっぱ
-        .tabsugikun
-          = link_to "/taisyou" do
-            できすぎやろ
+          アクセス
+      .tab4
+        = link_to "/taisyou" do
+          店主について
 
-    .tab3
-      = link_to "/access" do
-        アクセス
-    .tab4
-      = link_to "/taisyou" do
-        店主について
-
-.gazoukurukuru
-  .syasinn
-    <img src="/assets/1on.jpg" class=bigimage>
-  .syasinn
-    <img src="/assets/2on.jpg" class=bigimage>
-  .syasinn
-    <img src="/assets/3on" class=bigimage>
+-# .gazoukurukuru
+-#   .syasinn
+-#     <img src="/assets/1on.jpg" class=bigimage>
+-#   .syasinn
+-#     <img src="/assets/2on.jpg" class=bigimage>
+-#   .syasinn
+-#     <img src="/assets/3on" class=bigimage>
 .itiran
   .itiran__pickup
     ピックアップ
@@ -128,17 +127,17 @@
     -#     カートに入れる
     .b
       .bsetumei
-        旬の野菜販売してます！！
+        旬の野菜販売してます！
       .bgazou
         <img src="/assets/1on.jpg" class=image>
     .c
       .csetumei
-        お持ち帰りについて
+        予約して欲しい制について！
       .cgazou
         <img src="/assets/2on.jpg" class=image>
     .d
       .dsetumei
-        お持ち帰り予約はこちら！
+        おすすめの食べ方！
       .dgazou
         <img src="/assets/1on.jpg" class=image>
     -# .e
@@ -162,7 +161,8 @@
     .abcd__abcd
       TEL(01-1111-1111)
     .abcd__abcde
-      RECRUIT
+      = link_to "/access" do
+        RECRUIT
 
   -# .abcdef
   -#   .abcdef__abcdef
@@ -413,4 +413,20 @@
           autoplaySpeed: 4000,
       });
   });
+
+:javascript
+  jQuery(function($) {
+      $('.bg-switcher').bgSwitcher({
+          images: ['assets/1on.jpg','assets/2on.jpg','assets/3on.jpg'], // 切り替え画像
+          Interval: 5000, //切り替えの間隔 1000=1秒
+          start: true, //$.fn.bgswitcher(config)をコールした時に切り替えを開始する
+          loop: true, //切り替えをループする
+          shuffle: false, //背景画像の順番をシャッフルする
+          effect: "fade", //エフェクトの種類 "fade" "blind" "clip" "slide" "drop" "hide"
+          duration: 1000, //エフェクトの時間 1000=1秒
+          easing: "swing", //エフェクトのイージング "swing" "linear"
+      });
+  });
+
+
 
