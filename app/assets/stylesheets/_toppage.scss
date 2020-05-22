@@ -81,6 +81,11 @@ html, body {
         }
         .login{
         }
+        .logout{
+          margin-left: 120px;
+          margin-top: 3vh;
+          width: 100px;
+        }
       }
     }
   
@@ -100,6 +105,7 @@ html, body {
         }
         .tabko{
           position: absolute;
+          top: 11vh;
           width: 12.5%;
           text-align: center;
           display: none;
@@ -126,6 +132,7 @@ html, body {
           .tabkiti{
             background-color: rgba(255, 255, 255, 0.5);
             display: none;
+            margin-top: 2px;
           }
   
           .tabmi{
@@ -146,7 +153,7 @@ html, body {
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 4.9vh;
+                top: 5vh;
                 left: 100%;
               }
               .tabchan3{
@@ -154,7 +161,7 @@ html, body {
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 9.8vh;
+                top: 10vh;
                 left: 100%;
               }
   
@@ -175,7 +182,7 @@ html, body {
               }
               .kaiou{
                 position: absolute;
-                top: 4.9vh;
+                top: 5vh;
                 left: 100%;
                 width: 100%;
                 text-align: center;
@@ -184,7 +191,7 @@ html, body {
               }
               .hanayama{
                 position: absolute;
-                top: 9.8vh;
+                top: 10vh;
                 left: 100%;
                 width: 100%;
                 text-align: center;
@@ -193,7 +200,7 @@ html, body {
               }
               .sibukawa{
                 position: absolute;
-                top: 14.7vh;
+                top: 15vh;
                 left: 100%;
                 width: 100%;
                 text-align: center;
@@ -219,7 +226,7 @@ html, body {
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 4.9vh;
+                top: 5vh;
                 left: 100%;
               }
               .jaian{
@@ -227,7 +234,7 @@ html, body {
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 9.8vh;
+                top: 10vh;
                 left: 100%;
               }
               .tabo{
@@ -235,7 +242,7 @@ html, body {
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 14.8vh;
+                top: 15vh;
                 left: 100%;
               }
               .tabsugikun{
@@ -243,7 +250,7 @@ html, body {
                 width: 100%;
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.5);
-                top: 19.7vh;
+                top: 20vh;
                 left: 100%;
               }
   

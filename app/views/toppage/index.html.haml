@@ -7,10 +7,10 @@
         = link_to "/", class: "gottuanlogo" do
           <img src="/assets/1on.jpg" class=image>
       .kennsakumado
-        -# .kennsakumado__omotikaeri
-        -#   = link_to "/basicpages/omotikaeri" do
         .tel
-          当店は予約して欲しい制です！！
+          = link_to "/basicpages/omotikaeri" do
+
+            当店は予約して欲しい制です！！
         .header__tab
           .tab1
             .taboya
@@ -88,7 +88,7 @@
       .user
         - if user_signed_in?
           .loginstatus
-            ごっつぁんです！#{current_user.name} さん
+            -# ごっつぁんです！#{current_user.name} さん
           .logout
             = link_to "ログアウト", destroy_user_session_path, method: :delete
         - else
