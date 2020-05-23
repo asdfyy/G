@@ -15,50 +15,55 @@
 -#     = f.submit "Sign up"
 -# = render "devise/shared/links"
 
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
+= form_for(@user, url: user_registration_path) do |f|
   .signinback
-    .signinform
-      .signinform__email
-        メールアドレス
-      .signinform__emailform
-        = f.email_field :email, autofocus: true, class: "inputarea", autocomplete: "email"
-      .signinform__password
-        パスワード
-      .signinform__passwordform
-        = f.password_field :password, class: "inputarea", autocomplete: "new-password"
-      .signinform__repassword
-        パスワード再入力
-      .signinform__repasswordform
-        = f.password_field :password_confirmation, class: "inputarea", autocomplete: "new-password"
-      .signinform__name
-        .signinform__fname
-          姓（漢字）
-          .signinform__fnameform
-            = f.text_field :fname, class: "nameinputarea"
-        .signinform__lname
-          名（漢字）
-          .signinform__lnameform
-            = f.text_field :lname, class: "nameinputarea"
-      .signinform__namekana
-        .signinform__fnamekana
-          姓（カナ）
-          .signinform__fnamekanaform
-            = f.text_field :fnamekana, class: "nameinputarea"
-        .signinform__lnamekana
-          名（カナ）
-          .signinform__lnamekanaform
-            = f.text_field :lnamekana, class: "nameinputarea"
-      .signinform__age
-        年齢
-      .signinform__ageform
-        = f.text_field :age, class: "inputarea"
-      .signinform__phonenumber
-        電話番号
-      .signinform__phonenumberform
-        = f.text_field :phonenumber, class: "inputarea"
-      .signinform__submit
-        = f.submit "次へ", class: "registerbtn"
+    .signuptitle
+      ごっつ庵会員登録フォーム
+    .signupC
+      .signuperror
+        = render "devise/shared/error_messages"
+      .signinform
+        .signinform__email
+          メールアドレス
+        .signinform__emailform
+          = f.email_field :email, autofocus: true, class: "inputarea", autocomplete: "email"
+        .signinform__password
+          パスワード
+        .signinform__passwordform
+          = f.password_field :password, class: "inputarea", autocomplete: "new-password"
+        .signinform__repassword
+          パスワード再入力
+        .signinform__repasswordform
+          = f.password_field :password_confirmation, class: "inputarea", autocomplete: "new-password"
+        .signinform__name
+          .signinform__fname
+            姓（漢字）
+            .signinform__fnameform
+              = f.text_field :fname, class: "nameinputarea"
+          .signinform__lname
+            名（漢字）
+            .signinform__lnameform
+              = f.text_field :lname, class: "nameinputarea"
+        .signinform__namekana
+          .signinform__fnamekana
+            姓（カナ）
+            .signinform__fnamekanaform
+              = f.text_field :fnamekana, class: "nameinputarea"
+          .signinform__lnamekana
+            名（カナ）
+            .signinform__lnamekanaform
+              = f.text_field :lnamekana, class: "nameinputarea"
+        .signinform__age
+          年齢
+        .signinform__ageform
+          = f.text_field :age, class: "inputarea"
+        .signinform__phonenumber
+          電話番号
+        .signinform__phonenumberform
+          = f.text_field :phonenumber, class: "inputarea"
+        .signinform__submit
+          = f.submit "次へ", class: "registerbtn"
+
 
 
 
