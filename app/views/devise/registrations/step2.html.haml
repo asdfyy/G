@@ -1,0 +1,7 @@
+= form_for @user, url: signup_index_path, method: :post, html: {class: 'forth-main-wrapper__box'} do |f|
+  = f.text_field :zipcode, placeholder: '例)1100001 '
+  = f.text_field :prefecture, placeholder: '例) 埼玉県'
+  = f.text_field :city, placeholder: '例) 春日部市'
+  = f.text_field :address, placeholder: '例)双葉町904 '
+  = f.text_field :building, placeholder: '例)またずれ荘 '
+  = f.submit '次へ進む'

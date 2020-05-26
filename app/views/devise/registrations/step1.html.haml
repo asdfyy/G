@@ -1,0 +1,11 @@
+= form_for @user, url: signup2_path, method: :get, html: {class: 'first-main__box'} do |f|
+  = f.email_field :email, placeholder: 'PC・携帯どちらでも可'
+  = f.password_field :password, placeholder: '6文字以上'
+  = f.password_field :password_confirmation, placeholder: '6文字以上'
+  = f.text_field :fname, placeholder: '例) 大家'
+  = f.text_field :lname, placeholder: '例) 主代'
+  = f.text_field :fnamekana, placeholder: '例) メルカリ太郎'
+  = f.text_field :lnamekana, placeholder: '例) メルカリ太郎'
+  = f.text_field :age, placeholder: '例) メルカリ太郎'
+  = f.text_field :phonenumber, placeholder: '例) メルカリ太郎'
+  = f.submit '次へ進む'

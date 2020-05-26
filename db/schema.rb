@@ -10,19 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200520125205) do
-
-  create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "zipcode",    null: false
-    t.string   "prefecture", null: false
-    t.string   "city",       null: false
-    t.string   "address"
-    t.string   "building"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_addresses_on_user_id", using: :btree
-  end
+ActiveRecord::Schema.define(version: 20200517142506) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -35,6 +23,11 @@ ActiveRecord::Schema.define(version: 20200520125205) do
     t.string   "lnamekana",                           null: false
     t.integer  "age",                                 null: false
     t.integer  "phonenumber",                         null: false
+    t.integer  "zipcode",                             null: false
+    t.string   "prefecture",                          null: false
+    t.string   "city",                                null: false
+    t.string   "address"
+    t.string   "building"
     t.datetime "remember_created_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
