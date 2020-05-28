@@ -1,4 +1,4 @@
-- @addresses.each do |address|
+.j
   .a
     ユーザー名
     = @user.fname
@@ -8,11 +8,10 @@
   .b
     メールアドレス
     = current_user.email  
-    .c
+  .c
     年齢
     = @user.age
-  .d
-    郵便番号
-    = address.zipcode
-  .e
-    @@@@@@@@@@@@@@@@@@@@@@@@@@
+    .d
+      郵便番号
+      = @addresses.zipcode
+      
