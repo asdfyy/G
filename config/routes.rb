@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'userinfos/show'
+
   devise_for :users, controllers: {
     registrations: 'users/registrations',
   }

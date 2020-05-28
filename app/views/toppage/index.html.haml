@@ -88,15 +88,15 @@
       .user
         - if user_signed_in?
           .loginstatus
-            -# ごっつぁんです！#{current_user.name} さん
+            ごっつぁんです！#{current_user.fname} さん
+          .userinfo
+            = link_to "会員情報", userinfos_show_path
           .logout
             = link_to "ログアウト", destroy_user_session_path, method: :delete
         - else
           .loginstasus
             未ログイン
-          -# %a.sinki{href: signup1_path}
           %a.sinki{href: new_user_registration_path}
-
             新規登録
           %a.login{href: new_user_session_path}
             ログイン

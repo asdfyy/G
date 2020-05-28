@@ -1,0 +1,19 @@
+- @addresses.each do |address|
+  %h1 about me
+  .a
+    ユーザー名
+    = @user.fname
+    = @user.lname
+    = @user.fnamekana
+    = @user.lnamekana
+  .b
+    メールアドレス
+    = current_user.email  
+    .c
+    年齢
+    = @user.age
+  .d
+    郵便番号
+    = address.zipcode
+  .e
+    @@@@@@@@@@@@@@@@@@@@@@@@@@
