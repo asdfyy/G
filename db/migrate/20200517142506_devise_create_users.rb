@@ -15,7 +15,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :fnamekana, null: false
       t.string :lnamekana, null: false
       t.integer :age, null: false
-      t.integer :phonenumber, null: false
+      t.string :phonenumber, null: false
       ## Rememberable
       t.datetime :remember_created_at
 
