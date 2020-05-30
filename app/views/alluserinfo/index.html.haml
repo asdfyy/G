@@ -1,0 +1,29 @@
+.alluserinfoside
+  .userside
+    - @user.each do |user|
+      .alluserinfouser
+        .firstname
+          = user.fname
+        .lastname
+          = user.lname
+        .lastnamekana
+          = user.fnamekana
+        .lastnamelana
+          = user.lnamekana
+        .age
+          = user.age
+        .phonenumber
+          = user.phonenumber
+  .addressside
+    - @addresses.each do |address|
+      .alluserinfoaddress
+        .zipcode
+          = address.zipcode
+        .prefecture
+          = address.prefecture
+        .city
+          = address.city
+        .address
+          = address.address
+        .building
+          = address.building

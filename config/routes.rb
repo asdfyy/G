@@ -8,8 +8,8 @@ devise_scope :user do
 end
 
 
-get 'userinfos/show'
-
+  get 'userinfos/show'
+  get 'alluserinfo/index'
   root 'toppage#index'
   get "/tyannko" => "toppage#tyannko"
 end

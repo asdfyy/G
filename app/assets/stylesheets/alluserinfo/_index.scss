@@ -1,0 +1,34 @@
+.alluserinfoside{
+  display: flex;
+  .userside{
+
+  }
+  .addressside{
+    padding-top: 25px;
+    background-color: yellowgreen;
+  }
+}
+    .alluserinfouser{
+      display: flex;
+      height: 25px;
+      line-height: 25px;
+      .firstname{
+      }
+    }
+    .alluserinfoaddress{
+      display: flex;
+      height: 25px;
+      line-height: 25px;
+      .zipcode{
+      }
+      .prefecture{
+      }
+      .city{
+
+      }
+      .address{
+
+      }
+      .building{
+      }
+    }

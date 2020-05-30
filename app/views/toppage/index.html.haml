@@ -91,7 +91,7 @@
             .loginstatus
               ごっつぁんです！#{current_user.fname} さん
             .userinfo
-              = link_to "全会員情報一覧", userinfos_show_path
+              = link_to "全会員情報一覧", alluserinfo_index_path
             .logout
               = link_to "ログアウト", destroy_user_session_path, method: :delete
           - else
