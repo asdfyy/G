@@ -87,12 +87,20 @@
 
       .user
         - if user_signed_in?
-          .loginstatus
-            ごっつぁんです！#{current_user.fname} さん
-          .userinfo
-            = link_to "会員情報", userinfos_show_path
-          .logout
-            = link_to "ログアウト", destroy_user_session_path, method: :delete
+          - if current_user == @user || current_user.admin?
+            .loginstatus
+              ごっつぁんです！#{current_user.fname} さん
+            .userinfo
+              = link_to "全会員情報一覧", userinfos_show_path
+            .logout
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+          - else
+            .loginstatus
+              ごっつぁんです！#{current_user.fname} さん
+            .userinfo
+              = link_to "会員情報", userinfos_show_path
+            .logout
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
         - else
           .loginstasus
             未ログイン
