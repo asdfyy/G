@@ -1,11 +1,17 @@
+.kaiinnzyouhou{
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
 .alluserinfoside{
   display: flex;
+  justify-content: center;
   .userside{
 
   }
   .addressside{
-    padding-top: 25px;
-    background-color: yellowgreen;
+    // padding-top: 25px;
   }
 }
     .alluserinfouser{
@@ -13,6 +19,32 @@
       height: 25px;
       line-height: 25px;
       .firstname{
+        width: 100px;
+        text-align: center;
+      }
+      .id{
+        width: 40px;
+        text-align: center;
+      }
+      .lastname{
+        width: 100px;
+        text-align: center;
+      }
+      .firstnamekana{
+        width: 100px;
+        text-align: center;
+      }
+      .lastnamekana{
+        width: 100px;
+        text-align: center;
+      }
+      .age{
+        width: 70px;
+        text-align: center;
+      }
+      .phonenumber{
+        width: 130px;
+        text-align: center;
       }
     }
     .alluserinfoaddress{
@@ -20,15 +52,27 @@
       height: 25px;
       line-height: 25px;
       .zipcode{
+        width: 100px;
+        text-align: center;
+
       }
       .prefecture{
+        width: 70px;
+        text-align: center;
+
       }
       .city{
+        width: 160px;
+        text-align: center;
 
       }
       .address{
+        width: 160px;
+        text-align: center;
 
       }
       .building{
+        width: 280px;
+        text-align: center;
       }
     }

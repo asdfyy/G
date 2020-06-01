@@ -1,14 +1,22 @@
+へっだー
+
+
+.kaiinnzyouhou
+  会員情報（降順）
+
 .alluserinfoside
   .userside
     - @user.each do |user|
       .alluserinfouser
+        .id
+          = user.id
         .firstname
           = user.fname
         .lastname
           = user.lname
-        .lastnamekana
+        .firstnamekana
           = user.fnamekana
-        .lastnamelana
+        .lastnamekana
           = user.lnamekana
         .age
           = user.age
@@ -27,3 +35,6 @@
           = address.address
         .building
           = address.building
+
+
+ふったー
