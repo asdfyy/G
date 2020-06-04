@@ -1,0 +1,247 @@
+body{
+  font-family: “STKaiti”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
+  font-weight: bold;
+}
+
+.header {
+  height: 11vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgb(33, 30, 132);
+  a{
+    display: block;
+    text-decoration: none;
+  }
+  a:visited{
+    color: rgb(33, 30, 132);
+  }
+  a:link{
+    color: rgb(33, 30, 132);
+  }
+  &__top{
+    display: flex;
+    .logo {
+      height: 13vh;
+      margin: 0 auto;
+      width: 25%;
+
+      .image{
+        width: 10vh;
+        height: 10vh;
+        padding-left: 6vw;
+        margin-top: 1%;
+      }
+    }
+    .kennsakumado{
+      text-align: center;
+      width: 50%;
+      margin-top: 0.5%;
+      &__omotikaeri{
+        height: 6vh;
+        width: 33.5vw;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 6vh;
+        font-size: 30px;
+      }
+      .tel{
+        text-align: center;
+        font-size: 25px;
+      }
+  
+    }
+    .user{
+      // background-color: yellow;
+      margin-top: 0.5%;
+      text-align: center;
+      width: 25%;
+      .loginstatus{
+      }
+      .sinki{
+      }
+      .login{
+      }
+      .logout{
+        margin: 0 auto;
+        width: 100px;
+      }
+    }
+  }
+
+  &__tab{
+    padding-top: 2px;
+    height: 5vh;
+    line-height: 5vh;
+    display: flex;
+    .tab1{
+      width: 25%;
+      text-align: center;
+      cursor: pointer;
+      z-index: 100;
+    }
+      .taboya{
+        position: relative;
+      }
+      .tabko{
+        position: absolute;
+        top: 11vh;
+        width: 12.5%;
+        text-align: center;
+        display: none;
+        .dasi{
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+        .yasai{
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+        .sake{
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+        .sime{
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      
+    .tab2{
+      width: 25%;
+      text-align: center;
+      z-index: 100;
+    }
+        .tabkiti{
+          background-color: rgba(255, 255, 255, 0.5);
+          display: none;
+          margin-top: 2px;
+        }
+
+        .tabmi{
+          position: relative;
+          background-color: rgba(255, 255, 255, 0.5);
+          display: none;
+        }
+            .tabchan1{
+              display: none;
+              width: 100%;
+              position: absolute;
+              background-color: rgba(255, 255, 255, 0.5);
+              top: 0;
+              left: 100%;
+            }
+            .tabchan2{
+              display: none;
+              width: 100%;
+              position: absolute;
+              background-color: rgba(255, 255, 255, 0.5);
+              top: 5vh;
+              left: 100%;
+            }
+            .tabchan3{
+              display: none;
+              width: 100%;
+              position: absolute;
+              background-color: rgba(255, 255, 255, 0.5);
+              top: 10vh;
+              left: 100%;
+            }
+
+
+        .tabjiro{
+          position: relative;
+          background-color: rgba(255, 255, 255, 0.5);
+          display: none;
+        }
+            .baki{
+              position: absolute;
+              top: 0;
+              left: 100%;
+              width: 100%;
+              text-align:center;
+              display: none;
+              background-color: rgba(255, 255, 255, 0.5);
+            }
+            .kaiou{
+              position: absolute;
+              top: 5vh;
+              left: 100%;
+              width: 100%;
+              text-align: center;
+              display: none;
+              background-color: rgba(255, 255, 255, 0.5);
+            }
+            .hanayama{
+              position: absolute;
+              top: 10vh;
+              left: 100%;
+              width: 100%;
+              text-align: center;
+              display: none;
+              background-color: rgba(255, 255, 255, 0.5);
+            }
+            .sibukawa{
+              position: absolute;
+              top: 15vh;
+              left: 100%;
+              width: 100%;
+              text-align: center;
+              display: none;
+              background-color: rgba(255, 255, 255, 0.5);
+            }
+
+        .tabemon{
+          position: relative;
+          background-color: rgba(255, 255, 255, 0.5);
+          display: none;
+        }
+            .tabta{
+              display: none;
+              width: 100%;
+              position: absolute;
+              background-color: rgba(255, 255, 255, 0.5);
+              top: 0;
+              left: 100%;
+            }
+            .tabkachan{
+              display: none;
+              width: 100%;
+              position: absolute;
+              background-color: rgba(255, 255, 255, 0.5);
+              top: 5vh;
+              left: 100%;
+            }
+            .jaian{
+              display: none;
+              width: 100%;
+              position: absolute;
+              background-color: rgba(255, 255, 255, 0.5);
+              top: 10vh;
+              left: 100%;
+            }
+            .tabo{
+              display: none;
+              width: 100%;
+              position: absolute;
+              background-color: rgba(255, 255, 255, 0.5);
+              top: 15vh;
+              left: 100%;
+            }
+            .tabsugikun{
+              display: none;
+              width: 100%;
+              position: absolute;
+              background-color: rgba(255, 255, 255, 0.5);
+              top: 20vh;
+              left: 100%;
+            }
+
+
+
+
+    .tab3{
+      width: 25%;
+      text-align: center;
+    }
+    .tab4{
+      width: 25%;
+      text-align: center;
+    }
+  }
+}

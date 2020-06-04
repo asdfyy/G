@@ -8,82 +8,78 @@
           <img src="/assets/1on.jpg" class=image>
       .kennsakumado
         .tel
-          = link_to "/basicpages/omotikaeri" do
-
-            当店は予約して欲しい制です！！
+          = link_to "/kodawari/omotikaeri" do
+            ご予約（００）００００−００００
         .header__tab
           .tab1
             .taboya
               こだわり
             .tabko
               .dasi
-                = link_to "/basicpages/sinnkitouroku" do
-                  だし
+                %a{:href => "kodawari/kodawari#dasigazou"}だし
               .yasai
-                = link_to "/basicpages/tyuukannpage" do
-                  野菜
+                %a{:href => "kodawari/kodawari#yasaigazou"}野菜
               .sake
-                = link_to "/basicpages/tyuukannpage" do
-                  酒
+                %a{:href => "kodawari/kodawari#sakegazou"}酒
               .sime
-                = link_to "/basicpages/index" do
-                  シメ
+                %a{:href => "kodawari/kodawari#simegazou"}シメ
           .tab2
             メニュー
             .tabkiti
               = link_to "/tyannko" do
                 ちゃんこ鍋
             .tabmi
-              = link_to "/basicpages/sinnkitouroku" do
+              = link_to "/kodawari/sinnkitouroku" do
                 一品もの
               .tabchan1
-                = link_to "/basicpages/tyuukannpage" do
-                  タブちゃんです
+                = link_to "/kodawari/tyuukannpage" do
+                  やりいかのお造り
               .tabchan2
-                = link_to "/basicpages/tyuukannpage" do
-                  うほ
+                = link_to "/kodawari/tyuukannpage" do
+                  生しらすポン酢
               .tabchan3
-                = link_to "/basicpages/tyuukannpage" do
-                  うほちゃんです
+                = link_to "/kodawari/tyuukannpage" do
+                  サメ軟骨梅肉あえ
             .tabjiro
               = link_to "/access" do
-                こんにちはタブ次郎です
+                追加メニュー
               .baki
-                = link_to "/basicpages/haisouryou" do
-                  地下チャンプ
+                = link_to "/kodawari/haisouryou" do
+                  豚しゃぶしゃぶ肉
               .kaiou
                 = link_to "/taisyou" do
-                  一向ににかまわんッッ
+                  野菜類
               .hanayama
                 = link_to "/taisyou" do
-                  花山薫（１９）
+                  中華そば
               .sibukawa
                 = link_to "/taisyou" do
-                  柔術
+                  雑炊セット
             .tabemon
               = link_to "/access" do
-                ぼくたぶえもんです
+                お飲み物
               .tabta
-                = link_to "/basicpages/haisouryou" do
-                  のびのびた
+                = link_to "/kodawari/haisouryou" do
+                  地酒
               .tabkachan
                 = link_to "/taisyou" do
-                  みなもとのよしつね
+                  日本酒
               .jaian
                 = link_to "/taisyou" do
-                  ガキ大将
-              .tabo
-                = link_to "/taisyou" do
-                  かっぱ
-              .tabsugikun
-                = link_to "/taisyou" do
-                  できすぎやろ
+                  チューハイ
+              -# .tabo
+              -#   = link_to "/taisyou" do
+                  
+              -# .tabsugikun
+              -#   = link_to "/taisyou" do
+              -#     ソフトドリンク
           .tab3
+            = link_to "/taisyou" do
+              飲み放題コース
+          .tab4
             = link_to "/access" do
               アクセス
-          .tab4
-            = link_to "/taisyou" do
-              店主について
+
 
       .user
         - if user_signed_in?

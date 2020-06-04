@@ -1,0 +1,106 @@
+.header
+  .header__top
+    .logo
+      = link_to "/", class: "gottuanlogo" do
+        <img src="/assets/1on.jpg" class=image>
+    .kennsakumado
+      .tel
+        = link_to "/basicpages/omotikaeri" do
+          当店は予約して欲しい制です！！
+      .header__tab
+        .tab1
+          .taboya
+            こだわり
+          .tabko
+            .dasi
+              = link_to "/basicpages/sinnkitouroku" do
+                だし
+            .yasai
+              = link_to "/basicpages/tyuukannpage" do
+                野菜
+            .sake
+              = link_to "/basicpages/tyuukannpage" do
+                酒
+            .sime
+              = link_to "/basicpages/index" do
+                シメ
+        .tab2
+          メニュー
+          .tabkiti
+            = link_to "/tyannko" do
+              ちゃんこ鍋
+          .tabmi
+            = link_to "/basicpages/sinnkitouroku" do
+              一品もの
+            .tabchan1
+              = link_to "/basicpages/tyuukannpage" do
+                タブちゃんです
+            .tabchan2
+              = link_to "/basicpages/tyuukannpage" do
+                うほ
+            .tabchan3
+              = link_to "/basicpages/tyuukannpage" do
+                うほちゃんです
+          .tabjiro
+            = link_to "/access" do
+              こんにちはタブ次郎です
+            .baki
+              = link_to "/basicpages/haisouryou" do
+                地下チャンプ
+            .kaiou
+              = link_to "/taisyou" do
+                一向ににかまわんッッ
+            .hanayama
+              = link_to "/taisyou" do
+                花山薫（１９）
+            .sibukawa
+              = link_to "/taisyou" do
+                柔術
+          .tabemon
+            = link_to "/access" do
+              ぼくたぶえもんです
+            .tabta
+              = link_to "/basicpages/haisouryou" do
+                のびのびた
+            .tabkachan
+              = link_to "/taisyou" do
+                みなもとのよしつね
+            .jaian
+              = link_to "/taisyou" do
+                ガキ大将
+            .tabo
+              = link_to "/taisyou" do
+                かっぱ
+            .tabsugikun
+              = link_to "/taisyou" do
+                できすぎやろ
+        .tab3
+          = link_to "/access" do
+            アクセス
+        .tab4
+          = link_to "/taisyou" do
+            店主について
+
+    .user
+      - if user_signed_in?
+        - if current_user == @user || current_user.admin?
+          .loginstatus
+            ごっつぁんです！#{current_user.fname} さん
+          .userinfo
+            = link_to "全会員情報一覧", alluserinfo_index_path
+          .logout
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - else
+          .loginstatus
+            ごっつぁんです！#{current_user.fname} さん
+          .userinfo
+            = link_to "会員情報", userinfos_show_path
+          .logout
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+      - else
+        .loginstasus
+          未ログイン
+        %a.sinki{href: new_user_registration_path}
+          新規登録
+        %a.login{href: new_user_session_path}
+          ログイン
