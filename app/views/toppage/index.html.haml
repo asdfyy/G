@@ -3,70 +3,59 @@
 
   .header
     .header__top
-      .logo
-        = link_to "/", class: "gottuanlogo" do
-          <img src="/assets/1on.jpg" class=image>
+      .logospace
+        = link_to "/" do
+          <img src="/assets/main-logo-pc.png" class=image>
       .kennsakumado
         .tel
-          = link_to "/kodawari/omotikaeri" do
-            ご予約（００）００００−００００
+          ご予約（００）００００−００００
         .header__tab
           .tab1
             .taboya
               こだわり
             .tabko
               .dasi
-                %a{:href => "kodawari/kodawari#dasigazou"}だし
+                %a{:href => "/kodawari#titlelink1"}だし
               .yasai
-                %a{:href => "kodawari/kodawari#yasaigazou"}野菜
+                %a{:href => "/kodawari#titlelink2"}野菜
               .sake
-                %a{:href => "kodawari/kodawari#sakegazou"}酒
+                %a{:href => "/kodawari#titlelink3"}酒
               .sime
-                %a{:href => "kodawari/kodawari#simegazou"}シメ
+                %a{:href => "/kodawari#titlelink4"}シメ
           .tab2
             メニュー
             .tabkiti
               = link_to "/tyannko" do
                 ちゃんこ鍋
             .tabmi
-              = link_to "/kodawari/sinnkitouroku" do
+              = link_to "/ippinn" do
                 一品もの
               .tabchan1
-                = link_to "/kodawari/tyuukannpage" do
-                  やりいかのお造り
+                %a{:href => "/ippinn#gazou1"}やりいかのお造り
               .tabchan2
-                = link_to "/kodawari/tyuukannpage" do
-                  生しらすポン酢
+                %a{:href => "/ippinn#gazou2"}生しらすポン酢
               .tabchan3
-                = link_to "/kodawari/tyuukannpage" do
-                  サメ軟骨梅肉あえ
+                %a{:href => "/ippinn#gazou3"}サメ軟骨梅肉あえ
             .tabjiro
-              = link_to "/access" do
+              = link_to "/tuika" do
                 追加メニュー
               .baki
-                = link_to "/kodawari/haisouryou" do
-                  豚しゃぶしゃぶ肉
+                %a{:href => "/tuika#gazou1"}豚しゃぶしゃぶ肉
               .kaiou
-                = link_to "/taisyou" do
-                  野菜類
+                %a{:href => "/tuika#gazou2"}野菜類
               .hanayama
-                = link_to "/taisyou" do
-                  中華そば
+                %a{:href => "/tuika#gazou3"}中華そば
               .sibukawa
-                = link_to "/taisyou" do
-                  雑炊セット
+                %a{:href => "/tuika#gazou4"}雑炊セット
             .tabemon
-              = link_to "/access" do
+              = link_to "/drink" do
                 お飲み物
               .tabta
-                = link_to "/kodawari/haisouryou" do
-                  地酒
+                %a{:href => "/drink#gazou1"}地酒
               .tabkachan
-                = link_to "/taisyou" do
-                  日本酒
+                %a{:href => "/drink#gazou2"}日本酒
               .jaian
-                = link_to "/taisyou" do
-                  チューハイ
+                %a{:href => "/drink#gazou3"}チューハイ
               -# .tabo
               -#   = link_to "/taisyou" do
                   
@@ -74,7 +63,7 @@
               -#   = link_to "/taisyou" do
               -#     ソフトドリンク
           .tab3
-            = link_to "/taisyou" do
+            = link_to "/nomiho" do
               飲み放題コース
           .tab4
             = link_to "/access" do
@@ -156,9 +145,9 @@
 .footer
   .abc
     .abc__abc
-      コピーライト
-    .abc__logo
-      <img src="/assets/1on.jpg" class=image>
+      Copyright©︎ Chanko gottuan All Rights Reserved.
+      .abc__logo
+        <img src="/assets/main-logo-pc.png" class=image>
   .abcd
     .abcd__abcd
       TEL(01-1111-1111)
@@ -419,7 +408,7 @@
 :javascript
   jQuery(function($) {
       $('.bg-switcher').bgSwitcher({
-          images: ['assets/1on.jpg','assets/2on.jpg','assets/3on.jpg'], // 切り替え画像
+          images: ['assets/main-photo1-pc.jpg','assets/main-photo2-pc.jpg','assets/main-photo3-pc.jpg'], // 切り替え画像
           Interval: 5000, //切り替えの間隔 1000=1秒
           start: true, //$.fn.bgswitcher(config)をコールした時に切り替えを開始する
           loop: true, //切り替えをループする

@@ -1,0 +1,283 @@
+.Ttitle{
+  font-size: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.templates{
+  font-size: 18px;
+  padding-bottom: 100px;
+  .templates__title1{
+    border-left: 10px solid gold;
+    border-bottom: 1px solid gold;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 160px;
+    margin-right: 180px;
+    padding-left: 20px;
+  }
+  .templates__content1{
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    width: 80%;
+    margin: 0 auto;
+    &__gazou1{
+      width: 40%;
+      background-color: indianred;
+      .kodawariimage1{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+    }
+    &__setumei1{
+      word-wrap: break-word;
+      width: 60%;
+      .font1{
+        line-height: 50px;
+        padding-top: 75px;
+        width: 86%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .templates__title2{
+    border-left: 10px solid gold;
+    border-bottom: 1px solid gold;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 160px;
+    margin-right: 180px;
+    padding-left: 20px;
+
+  }
+  .templates__content2{
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    width: 80%;
+    margin: 0 auto;
+
+    &__setumei2{
+      word-wrap: break-word;
+      width: 60%;
+
+      .font2{
+        line-height: 50px;
+        padding-top: 70px;
+        width: 86%;
+        margin: 0 auto;
+      }
+    }
+    &__gazou2{
+      width: 40%;
+      .kodawariimage2{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+
+    }
+
+  }
+
+  .templates__title3{
+    border-left: 10px solid gold;
+    border-bottom: 1px solid gold;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 160px;
+    margin-right: 180px;
+    padding-left: 20px;
+
+  }
+  .templates__content3{
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    width: 80%;
+    margin: 0 auto;
+
+    &__gazou3{
+      width: 40%;
+      .kodawariimage3{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+
+    }
+    &__setumei3{
+      word-wrap: break-word;
+      width: 60%;
+
+      .font3{
+        line-height: 50px;
+        padding-top: 120px;
+        width: 86%;
+        margin: 0 auto;
+
+      }
+    }
+  }
+
+  .templates__title4{
+    border-left: 10px solid gold;
+    border-bottom: 1px solid gold;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 160px;
+    margin-right: 180px;
+    padding-left: 20px;
+
+  }
+  .templates__content4{
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    width: 80%;
+    margin: 0 auto;
+
+    &__setumei4{
+      word-wrap: break-word;
+      width: 60%;
+
+      .font4{
+        line-height: 50px;
+        padding-top: 25px;
+        width: 86%;
+        margin: 0 auto;
+
+      }
+    }
+    &__gazou4{
+      width: 40%;
+      .kodawariimage4{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .templateside{
+//   display: flex;
+//   justify-content: center;
+//   padding-bottom: 100px;
+//   font-size: 18px;
+//   &__left{
+//     #gazou1{
+//       margin: 0 auto;
+//       text-align: center;
+//       width: 450px;
+//       height: 450px;
+//       background-color: darkslateblue;
+//       line-height: 450px;
+//     }
+//     .setumei2{
+//       // line-height: 450px;
+//       text-align: center;
+//       word-wrap: break-word;
+//       margin: 0 auto;
+//       width: 650px;
+//       height: 450px;
+//       background-color: darkturquoise;
+//     }
+//     #gazou3{
+//       margin: 0 auto;
+//       text-align: center;
+//       width: 450px;
+//       height: 450px;
+//       line-height: 450px;
+//       background-color: darkslateblue;
+
+//     }
+//     .setumei4{
+//       text-align: center;
+//       word-wrap: break-word;
+//       margin: 0 auto;
+//       width: 650px;
+//       height: 450px;
+//       background-color: darkturquoise;
+//     }
+
+//   }
+//   &__right{
+//     .setumei1{
+//       width: 650px;
+//       height: 450px;
+//       background-color: darkturquoise;
+//       .font1{
+//         line-height: 50px;
+//         padding-top: 95px;
+//       }
+//     }
+//     #gazou2{
+//       margin: 0 auto;
+//       text-align: center;
+//       width: 450px;
+//       height: 450px;
+//       line-height: 450px;
+//       background-color: darkslateblue;
+//     }
+//     .setumei3{
+//       text-align: center;
+//       word-wrap: break-word;
+//       margin: 0 auto;
+//       width: 650px;
+//       height: 450px;
+//       background-color: darkturquoise;
+//     }
+//     #gazou4{
+//       margin: 0 auto;
+//       text-align: center;
+//       width: 450px;
+//       height: 450px;
+//       line-height: 450px;
+//       background-color: darkslateblue;
+//     }
+
+//   }
+// }

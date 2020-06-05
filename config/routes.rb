@@ -8,14 +8,17 @@ Rails.application.routes.draw do
   end
 
 
-  get 'kodawari/kodawari'
-
-
 
   get 'userinfos/show'
   get 'alluserinfo/index'
   root 'toppage#index'
+  get "/kodawari" => "toppage#kodawari"
   get "/tyannko" => "toppage#tyannko"
+  get "/ippinn" => "toppage#ippinn"
+  get "/tuika" => "toppage#tuika"
+  get "/drink" => "toppage#drink"
+  get "/nomiho" => "toppage#nomiho"
+  get "/access" => "toppage#access"
 end
 
 

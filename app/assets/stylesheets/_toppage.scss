@@ -8,10 +8,10 @@ html, body {
   padding: 0!important;
 }
 .bg-switcher {
-  width: 100vw;
   height: 100vh;
-  // background-position: center center;
-  // background-size: cover;
+  width: 100vw;
+  background-position: center center;
+  background-size: cover;
   // display: flex;
   // align-items: center;
   // justify-content: center;
@@ -40,16 +40,18 @@ html, body {
     }
     &__top{
       display: flex;
-      .logo {
+      .logospace{
         height: 13vh;
-        margin: 0 auto;
         width: 25%;
-
+        a{
+          width: 0px;
+          height: 0px;
+        }
         .image{
-          width: 10vh;
-          height: 10vh;
-          padding-left: 6vw;
-          margin-top: 1%;
+          width: 85px;
+          height: 85px;
+          margin-left: 100px;
+          padding-top: 2px;
         }
       }
       .kennsakumado{
@@ -76,6 +78,10 @@ html, body {
         text-align: center;
         width: 25%;
         .loginstatus{
+        }
+        .userinfo{
+          margin: 0 auto;
+          width: 120px;
         }
         .sinki{
         }
