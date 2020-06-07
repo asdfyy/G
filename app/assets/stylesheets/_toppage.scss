@@ -1,6 +1,7 @@
 body{
   font-family: “STKaiti”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
   font-weight: bold;
+
 }
 html, body {
   height: 100%;
@@ -275,14 +276,14 @@ html, body {
 }
 
 
-.gazoukurukuru{
-  height: 60vh;
-  // line-height: 14vh;
-  .bigimage{
-    height: 60vh;
-    width: 100%;
-  }
-}
+// .gazoukurukuru{
+//   height: 60vh;
+//   // line-height: 14vh;
+//   .bigimage{
+//     height: 60vh;
+//     width: 100%;
+//   }
+// }
 
 
 .itiran{
@@ -374,6 +375,7 @@ html, body {
   height: 180px;
   text-align: center;
   padding-top: 40px;
+
   .abc{
     &__abc{
     }
@@ -393,7 +395,19 @@ html, body {
     }
     &__abcde{
       width: 160px;
+      a{
+        text-decoration: none;
+      }
+      a:visited{
+        // color: rgb(33, 30, 132);
+        color: black;
+      }
+      a:link{
+        // color: rgb(33, 30, 132);
+        color: black;
 
+      }
+  
     }
   }
 //   .abcde{

@@ -1,22 +1,514 @@
+.Tback
+  .Theader
+    .Theader__top
+      .logospace
+        = link_to "/" do
+          <img src="/assets/main-logo-pc.png" class=image>
+      .kennsakumado
+        .tel
+          ご予約（００）００００−００００
+        .header__tab
+          .tab1
+            .taboya
+              こだわり
+            .tabko
+              .dasi
+                %a{:href => "/kodawari#titlelink1"}だし
+              .yasai
+                %a{:href => "/kodawari#titlelink2"}野菜
+              .sake
+                %a{:href => "/kodawari#titlelink3"}酒
+              .sime
+                %a{:href => "/kodawari#titlelink4"}シメ
+          .tab2
+            メニュー
+            .tabkiti
+              = link_to "/tyannko" do
+                お品書き
+            .tabmi
+              = link_to "/ippinn" do
+                一品もの
+              .tabchan1
+                %a{:href => "/ippinn#gazou1"}やりいかのお造り
+              .tabchan2
+                %a{:href => "/ippinn#gazou2"}生しらすポン酢
+              .tabchan3
+                %a{:href => "/ippinn#gazou3"}サメ軟骨梅肉あえ
+            .tabjiro
+              = link_to "/tuika" do
+                追加メニュー
+              .baki
+                %a{:href => "/tuika#gazou1"}豚しゃぶしゃぶ肉
+              .kaiou
+                %a{:href => "/tuika#gazou2"}野菜類
+              .hanayama
+                %a{:href => "/tuika#gazou3"}中華そば
+              .sibukawa
+                %a{:href => "/tuika#gazou4"}雑炊セット
+            .tabemon
+              = link_to "/drink" do
+                お飲み物
+              .tabta
+                %a{:href => "/drink#gazou1"}地酒
+              .tabkachan
+                %a{:href => "/drink#gazou2"}日本酒
+              .jaian
+                %a{:href => "/drink#gazou3"}チューハイ
+              -# .tabo
+              -#   = link_to "/taisyou" do
+                  
+              -# .tabsugikun
+              -#   = link_to "/taisyou" do
+              -#     ソフトドリンク
+          .tab3
+            = link_to "/nomiho" do
+              飲み放題コース
+          .tab4
+            = link_to "/access" do
+              アクセス
 
-ヘッダーをコピー
-.gazou
-  <img src="/assets/1on.jpeg" class=image>
-.menuname
-  ちゃんこ鍋
-.ryoukinn
-  ¥　2200(税込)
-.setumei
-  あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
 
-.footer
-  .abc
-    .abc__abc
-      コピーライト
-    .abc__logo
-      <img src="/assets/1on.jpg" class=image>
-  .abcd
-    .abcd__abcd
-      TEL(01-1111-1111)
-    .abcd__abcde
-      RECRUIT
+      .user
+        - if user_signed_in?
+          - if current_user == @user || current_user.admin?
+            .loginstatus
+              ごっつぁんです！#{current_user.fname} さん
+            .userinfo
+              = link_to "全会員情報一覧", alluserinfo_index_path
+            .logout
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+          - else
+            .loginstatus
+              ごっつぁんです！#{current_user.fname} さん
+            .userinfo
+              = link_to "会員情報", userinfos_show_path
+            .logout
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - else
+          .loginstasus
+            未ログイン
+          %a.sinki{href: new_user_registration_path}
+            新規登録
+          %a.login{href: new_user_session_path}
+            ログイン
+
+
+
+.Ttitle
+.templates
+  .menu-inner
+    .menutitle
+      お品書き
+    .menuside
+      .menuleft
+        .nabetitle
+          ちゃんこ鍋（２人前より）
+        .nabeprice
+          １人前　2000円（いずれも税抜）
+        .topping-title
+          鍋のトッピング
+        .toppingcontent
+          .toppingcontent__name
+            中華そば（自家栽培ニンニクサービス）
+          .toppingcontent__price
+            360円
+        .toppingcontent
+          .toppingcontent__name
+            うどん
+          .toppingcontent__price
+            360円
+        .toppingcontent
+          .toppingcontent__name
+            もずくしゃぶしゃぶ（沖縄・伊是名直送）
+          .toppingcontent__price
+            400円
+        .toppingcontent
+          .toppingcontent__name
+            おもち（１個）
+          .toppingcontent__price
+            150円
+        .toppingcontent
+          .toppingcontent__name
+            もち入りきんちゃく（２個）
+          .toppingcontent__price
+            400円
+        .toppingcontent
+          .toppingcontent__name
+            しゃぶしゃぶもち（５枚）
+          .toppingcontent__price
+            380円
+        .toppingcontent
+          .toppingcontent__name
+            エビシューマイ（６個）
+
+          .toppingcontent__price
+            450円
+        .toppingcontent
+          .toppingcontent__name
+            ウインナー（６個）
+          .toppingcontent__price
+            450円
+        .toppingcontent
+          .toppingcontent__name
+            豚しゃぶしゃぶ肉
+          .toppingcontent__price
+            550円
+        .toppingcontent
+          .toppingcontent__name
+            豆腐（６カン）
+          .toppingcontent__price
+            350円
+        .toppingcontent
+          .toppingcontent__name
+            雑炊（玉子、海苔、漬物付き）
+          .toppingcontent__price
+            400円
+        .toppingcontent
+          .toppingcontent__name
+            玉子（１個）
+          .toppingcontent__price
+            50円
+
+        .deza-to-title
+          デザートアイス
+        .deza-tocontent
+          .deza-tocontent__name
+            バニラ、ゆず、抹茶
+          .deza-tocontent__price
+            300円
+        .deza-tocontent
+          .deza-tocontent__name
+            イチゴアイス練乳入り
+          .deza-tocontent__price
+            190円
+        .drink-title
+          お飲み物
+        .drinkcontent
+          .drinkcontent__name
+            生ビール（キリン一番搾り）
+          .drinkcontent__price
+            480円
+        .drinkcontent
+          .drinkcontent__name
+            瓶ビール（キリン　クラシックラガー）
+          .drinkcontent__price
+            500円
+        .drinkcontent
+          .drinkcontent__name
+            酎ハイ
+          .drinkcontent__price
+            360円
+        .drinkcontent
+        （レモン、ライム、カルピス、巨峰、ゆず、等）
+        .drinkcontent
+          .drinkcontent__name
+            焼酎・泡盛（森伊蔵、伊佐美、瑞泉など）
+          .drinkcontent__price
+            400円
+        .drinkcontent
+          .drinkcontent__name
+            地酒（久保田萬寿、夢醸など）
+          .drinkcontent__price
+            450円
+      .menuright
+        .menugazou1
+          <img src="/assets/DSC_7996.jpeg" class=image>
+        .menugazou2
+          .menugazou2__a
+            <img src="/assets/sirasu.jpg" class=image>
+
+          .menugazou2__b
+            <img src="/assets/bainikuae.jpg" class=image>
+
+        .ippinn-title
+          一品料理
+        .ippinn-content
+          .ippinn-content__name
+            生しらすポン酢
+          .ippinn-content__price
+            600円
+        .ippinn-content
+          .ippinn-content__name
+            やりいか造りげそ付
+          .ippinn-content__price
+            550円
+        .ippinn-content
+          .ippinn-content__name
+            サメの軟骨梅肉あえ
+          .ippinn-content__price
+            550円
+        .ippinn-content
+          .ippinn-content__name
+            ほたるいか沖漬け
+          .ippinn-content__price
+            550円
+        .ippinn-content
+          .ippinn-content__name
+            生たこわさび
+          .ippinn-content__price
+            450円
+        .ippinn-content
+          .ippinn-content__name
+            スモーク牛タン
+          .ippinn-content__price
+            500円
+        .ippinn-content
+          .ippinn-content__name
+            もずくポン酢
+          .ippinn-content__price
+            450円
+        .ippinn-content
+          .ippinn-content__name
+            カレイの縁側ユッケ
+          .ippinn-content__price
+            550円
+        .ippinn-content
+          .ippinn-content__name
+            つけもの盛り合わせ
+          .ippinn-content__price
+            450円
+        .ippinn-content
+          .ippinn-content__name
+            みょうがの甘酢づけ
+          .ippinn-content__price
+            450円
+        .ippinn-content
+          .ippinn-content__name
+            らっきょの甘酢づけ
+          .ippinn-content__price
+            450円
+
+
+
+
+
+
+
+
+
+:javascript
+    $(function(){
+      $(".tab1 .taboya").on("click", function() {
+      $(this).nextAll().slideToggle(100);
+      });
+    });
+    $(function(){
+      $(".tab1 .taboya").on("click", function() {
+      $(this).css('color', '#0000ff')
+      });
+    });
+    $('.tab1').hover(
+    function(){
+      $('.taboya').css();
+      },
+    function(){
+      $('.taboya').css('color', '');
+      }
+    );
+
+
+    $('.yasai').hover(
+    function(){
+      $('.yasai').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+
+      },
+    function(){
+      $('.yasai').css('background-color', '');
+      }
+    );
+    $('.sake').hover(
+    function(){
+      $('.sake').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.sake').css('background-color', '');
+      }
+    );
+    $('.dasi').hover(
+    function(){
+      $('.dasi').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.dasi').css('background-color', '');
+      }
+    );
+    $('.sime').hover(
+    function(){
+      $('.sime').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.sime').css('background-color', '');
+      }
+    );
+
+
+
+
+    $('.tab2').hover(
+      function(){
+        $('.tab2').children().show();
+        $('.tab2').css('color', '#0000ff');
+
+      },
+      function(){
+        $('.tab2').children().hide();
+        $('.tab2').css('color', '');
+
+      }
+    );
+
+    $('.tabkiti').hover(
+      function(){
+        $('.tabkiti').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabkiti').css('background-color', '');
+      }
+    );
+
+
+
+    $('.tabmi').hover(
+      function(){
+        $('.tabmi').children().show();
+        $('.tabmi').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabmi').css('background-color', '');
+        $('.tabchan1').hide();
+        $('.tabchan2').hide();
+        $('.tabchan3').hide();
+      }
+    );
+    $('.tabchan1').hover(
+      function(){
+        $('.tabchan1').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan1').css('background-color', '');
+      }
+    );
+    $('.tabchan2').hover(
+      function(){
+        $('.tabchan2').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan2').css('background-color', '');
+      }
+    );
+    $('.tabchan3').hover(
+      function(){
+        $('.tabchan3').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan3').css('background-color', '');
+      }
+    );
+
+
+    $('.tabjiro').hover(
+      function(){
+        $('.tabjiro').children().show();
+        $('.tabjiro').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabjiro').css('background-color', '');
+        $('.baki').hide();
+        $('.kaiou').hide();
+        $('.hanayama').hide();
+        $('.sibukawa').hide();
+
+      }
+    );
+    $('.baki').hover(
+      function(){
+        $('.baki').css('background-color', '#f00');
+      },
+      function(){
+        $('.baki').css('background-color', '');
+      }
+    );
+    $('.kaiou').hover(
+      function(){
+        $('.kaiou').css('background-color', '#f00');
+      },
+      function(){
+        $('.kaiou').css('background-color', '');
+      }
+    );
+    $('.hanayama').hover(
+      function(){
+        $('.hanayama').css('background-color', '#f00');
+      },
+      function(){
+        $('.hanayama').css('background-color', '');
+      }
+    );
+    $('.sibukawa').hover(
+      function(){
+        $('.sibukawa').css('background-color', '#f00');
+      },
+      function(){
+        $('.sibukawa').css('background-color', '');
+      }
+    );
+
+
+    $('.tabemon').hover(
+      function(){
+        $('.tabemon').children().show();
+        $('.tabemon').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabemon').css('background-color', '');
+        $('.tabta').hide();
+        $('.tabkachan').hide();
+        $('.jaian').hide();
+        $('.tabo').hide();
+        $('.tabsugikun').hide();
+      }
+    );
+    $('.tabta').hover(
+      function(){
+        $('.tabta').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabta').css('background-color', '');
+      }
+    );
+    $('.tabkachan').hover(
+      function(){
+        $('.tabkachan').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabkachan').css('background-color', '');
+      }
+    );
+    $('.jaian').hover(
+      function(){
+        $('.jaian').css('background-color', '#f00');
+      },
+      function(){
+        $('.jaian').css('background-color', '');
+      }
+    );
+    $('.tabo').hover(
+      function(){
+        $('.tabo').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabo').css('background-color', '');
+      }
+    );
+    $('.tabsugikun').hover(
+      function(){
+        $('.tabsugikun').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabsugikun').css('background-color', '');
+      }
+    );

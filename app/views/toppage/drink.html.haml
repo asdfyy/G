@@ -1,3 +1,99 @@
+.Tback
+  .Theader
+    .Theader__top
+      .logospace
+        = link_to "/" do
+          <img src="/assets/main-logo-pc.png" class=image>
+      .kennsakumado
+        .tel
+          ご予約（００）００００−００００
+        .header__tab
+          .tab1
+            .taboya
+              こだわり
+            .tabko
+              .dasi
+                %a{:href => "/kodawari#titlelink1"}だし
+              .yasai
+                %a{:href => "/kodawari#titlelink2"}野菜
+              .sake
+                %a{:href => "/kodawari#titlelink3"}酒
+              .sime
+                %a{:href => "/kodawari#titlelink4"}シメ
+          .tab2
+            メニュー
+            .tabkiti
+              = link_to "/tyannko" do
+                お品書き
+            .tabmi
+              = link_to "/ippinn" do
+                一品もの
+              .tabchan1
+                %a{:href => "/ippinn#gazou1"}やりいかのお造り
+              .tabchan2
+                %a{:href => "/ippinn#gazou2"}生しらすポン酢
+              .tabchan3
+                %a{:href => "/ippinn#gazou3"}サメ軟骨梅肉あえ
+            .tabjiro
+              = link_to "/tuika" do
+                追加メニュー
+              .baki
+                %a{:href => "/tuika#gazou1"}豚しゃぶしゃぶ肉
+              .kaiou
+                %a{:href => "/tuika#gazou2"}野菜類
+              .hanayama
+                %a{:href => "/tuika#gazou3"}中華そば
+              .sibukawa
+                %a{:href => "/tuika#gazou4"}雑炊セット
+            .tabemon
+              = link_to "/drink" do
+                お飲み物
+              .tabta
+                %a{:href => "/drink#gazou1"}地酒
+              .tabkachan
+                %a{:href => "/drink#gazou2"}日本酒
+              .jaian
+                %a{:href => "/drink#gazou3"}チューハイ
+              -# .tabo
+              -#   = link_to "/taisyou" do
+                  
+              -# .tabsugikun
+              -#   = link_to "/taisyou" do
+              -#     ソフトドリンク
+          .tab3
+            = link_to "/nomiho" do
+              飲み放題コース
+          .tab4
+            = link_to "/access" do
+              アクセス
+
+
+      .user
+        - if user_signed_in?
+          - if current_user == @user || current_user.admin?
+            .loginstatus
+              ごっつぁんです！#{current_user.fname} さん
+            .userinfo
+              = link_to "全会員情報一覧", alluserinfo_index_path
+            .logout
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+          - else
+            .loginstatus
+              ごっつぁんです！#{current_user.fname} さん
+            .userinfo
+              = link_to "会員情報", userinfos_show_path
+            .logout
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - else
+          .loginstasus
+            未ログイン
+          %a.sinki{href: new_user_registration_path}
+            新規登録
+          %a.login{href: new_user_session_path}
+            ログイン
+
+
+
 .Ttitle
   こだわり
 .templates
@@ -35,14 +131,253 @@
       <img src="/assets/DSC_8395.jpeg" class=kodawariimage3>
     .templates__content3__setumei3
       .font3
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        大将の鋭い味覚により選別された当店のお酒達。大将曰く、「俺が直接飲んでうまいと感じた酒しか置いてない。」
+        %br
+        そんな当店自慢のお酒達は、定番のビールからマイナーな日本酒や地酒、なんとオリジナルのお酒、自家製のチューハイなど幅広く用意しております。
 
-  -# .templates__title4
-  -#   #titlelink4
-  -#     シメ
-  -# .templates__content4
-  -#   .templates__content4__setumei4
-  -#     .font4
-  -#       aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  -#   .templates__content4__gazou4
-  -#     <img src="/assets/DSC_7855.jpeg" class=kodawariimage4>
+  .templates__title4
+    #titlelink4
+      シメ
+  .templates__content4
+    .templates__content4__setumei4
+      .font4
+        鍋をすればその最後にシメを食べる。
+        %br
+        こういった家庭も多いのではないでしょうか？当店も中華そばと雑炊の二種類を用意しております。なんとこのシメを食べるためにちゃんこを頼む人も！それもそのはず。出汁が本当の意味で完成するのは、具材を入れて煮込み終わった後になるよう計算されているからです。出来上がった最高の出汁に、にんにくを少し入れて食べる中華そばはそこらの美味いラーメン屋にひけをとりません（自画自賛ですがこれはホントです）
+        %br
+        うちに来ていただいた際は、ぜひご注文ください！
+    .templates__content4__gazou4
+      <img src="/assets/DSC_7855.jpeg" class=kodawariimage4>
+
+
+
+
+
+
+
+:javascript
+    $(function(){
+      $(".tab1 .taboya").on("click", function() {
+      $(this).nextAll().slideToggle(100);
+      });
+    });
+    $(function(){
+      $(".tab1 .taboya").on("click", function() {
+      $(this).css('color', '#0000ff')
+      });
+    });
+    $('.tab1').hover(
+    function(){
+      $('.taboya').css();
+      },
+    function(){
+      $('.taboya').css('color', '');
+      }
+    );
+
+
+    $('.yasai').hover(
+    function(){
+      $('.yasai').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+
+      },
+    function(){
+      $('.yasai').css('background-color', '');
+      }
+    );
+    $('.sake').hover(
+    function(){
+      $('.sake').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.sake').css('background-color', '');
+      }
+    );
+    $('.dasi').hover(
+    function(){
+      $('.dasi').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.dasi').css('background-color', '');
+      }
+    );
+    $('.sime').hover(
+    function(){
+      $('.sime').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.sime').css('background-color', '');
+      }
+    );
+
+
+
+
+    $('.tab2').hover(
+      function(){
+        $('.tab2').children().show();
+        $('.tab2').css('color', '#0000ff');
+
+      },
+      function(){
+        $('.tab2').children().hide();
+        $('.tab2').css('color', '');
+
+      }
+    );
+
+    $('.tabkiti').hover(
+      function(){
+        $('.tabkiti').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabkiti').css('background-color', '');
+      }
+    );
+
+
+
+    $('.tabmi').hover(
+      function(){
+        $('.tabmi').children().show();
+        $('.tabmi').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabmi').css('background-color', '');
+        $('.tabchan1').hide();
+        $('.tabchan2').hide();
+        $('.tabchan3').hide();
+      }
+    );
+    $('.tabchan1').hover(
+      function(){
+        $('.tabchan1').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan1').css('background-color', '');
+      }
+    );
+    $('.tabchan2').hover(
+      function(){
+        $('.tabchan2').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan2').css('background-color', '');
+      }
+    );
+    $('.tabchan3').hover(
+      function(){
+        $('.tabchan3').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan3').css('background-color', '');
+      }
+    );
+
+
+    $('.tabjiro').hover(
+      function(){
+        $('.tabjiro').children().show();
+        $('.tabjiro').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabjiro').css('background-color', '');
+        $('.baki').hide();
+        $('.kaiou').hide();
+        $('.hanayama').hide();
+        $('.sibukawa').hide();
+
+      }
+    );
+    $('.baki').hover(
+      function(){
+        $('.baki').css('background-color', '#f00');
+      },
+      function(){
+        $('.baki').css('background-color', '');
+      }
+    );
+    $('.kaiou').hover(
+      function(){
+        $('.kaiou').css('background-color', '#f00');
+      },
+      function(){
+        $('.kaiou').css('background-color', '');
+      }
+    );
+    $('.hanayama').hover(
+      function(){
+        $('.hanayama').css('background-color', '#f00');
+      },
+      function(){
+        $('.hanayama').css('background-color', '');
+      }
+    );
+    $('.sibukawa').hover(
+      function(){
+        $('.sibukawa').css('background-color', '#f00');
+      },
+      function(){
+        $('.sibukawa').css('background-color', '');
+      }
+    );
+
+
+    $('.tabemon').hover(
+      function(){
+        $('.tabemon').children().show();
+        $('.tabemon').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabemon').css('background-color', '');
+        $('.tabta').hide();
+        $('.tabkachan').hide();
+        $('.jaian').hide();
+        $('.tabo').hide();
+        $('.tabsugikun').hide();
+      }
+    );
+    $('.tabta').hover(
+      function(){
+        $('.tabta').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabta').css('background-color', '');
+      }
+    );
+    $('.tabkachan').hover(
+      function(){
+        $('.tabkachan').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabkachan').css('background-color', '');
+      }
+    );
+    $('.jaian').hover(
+      function(){
+        $('.jaian').css('background-color', '#f00');
+      },
+      function(){
+        $('.jaian').css('background-color', '');
+      }
+    );
+    $('.tabo').hover(
+      function(){
+        $('.tabo').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabo').css('background-color', '');
+      }
+    );
+    $('.tabsugikun').hover(
+      function(){
+        $('.tabsugikun').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabsugikun').css('background-color', '');
+      }
+    );
