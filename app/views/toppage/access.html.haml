@@ -1,1 +1,418 @@
-akusesu
+.Tback
+  .Theader
+    .Theader__top
+      .logospace
+        = link_to "/" do
+          <img src="/assets/main-logo-pc.png" class=image>
+      .kennsakumado
+        .tel
+          ご予約（０６）６４５８ー０２３０
+        .header__tab
+          .tab1
+            .taboya
+              こだわり
+            .tabko
+              .dasi
+                %a{:href => "/kodawari#titlelink1"}だし
+              .yasai
+                %a{:href => "/kodawari#titlelink2"}野菜
+              .sake
+                %a{:href => "/kodawari#titlelink3"}酒
+              .sime
+                %a{:href => "/kodawari#titlelink4"}シメ
+          .tab2
+            メニュー
+            .tabkiti
+              = link_to "/tyannko" do
+                お品書き
+            .tabmi
+              = link_to "/ippinn" do
+                一品もの
+              .tabchan1
+                %a{:href => "/ippinn#titlelink1"}もずくポン酢
+              .tabchan2
+                %a{:href => "/ippinn#titlelink2"}つけもの盛り合わせ
+              .tabchan3
+                %a{:href => "/ippinn#titlelink3"}みょうがの甘酢漬け
+            .tabjiro
+              = link_to "/tuika" do
+                追加メニュー
+              .baki
+                %a{:href => "/tuika#titlelink1"}豚しゃぶしゃぶ肉
+              .kaiou
+                %a{:href => "/tuika#titlelink2"}野菜類
+              .hanayama
+                %a{:href => "/tuika#titlelink3"}雑炊セット
+              .sibukawa
+                %a{:href => "/tuika#titlelink4"}中華そば
+            .tabemon
+              = link_to "/drink" do
+                お飲み物
+              .tabta
+                %a{:href => "/drink#titlelink1"}地酒
+              .tabkachan
+                %a{:href => "/drink#titlelink2"}日本酒
+              .jaian
+                %a{:href => "/drink#titlelink3"}チューハイ
+              -# .tabo
+              -#   = link_to "/taisyou" do
+                  
+              -# .tabsugikun
+              -#   = link_to "/taisyou" do
+              -#     ソフトドリンク
+          .tab3
+            = link_to "/nomiho" do
+              飲み放題コース
+          .tab4
+            = link_to "/access" do
+              アクセス
+
+
+      .user
+        - if user_signed_in?
+          - if current_user == @user || current_user.admin?
+            .loginstatus
+              ごっつぁんです！#{current_user.fname} さん
+            .userinfo
+              = link_to "全会員情報一覧", alluserinfo_index_path
+            .logout
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+          - else
+            .loginstatus
+              ごっつぁんです！#{current_user.fname} さん
+            .userinfo
+              = link_to "会員情報", userinfos_show_path
+            .logout
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - else
+          .loginstasus
+            未ログイン
+          %a.sinki{href: new_user_registration_path}
+            新規登録
+          %a.login{href: new_user_session_path}
+            ログイン
+
+
+
+
+.accesstitle
+  阪神　野田駅からのアクセス
+.accesscontents
+  .accesscontents__access1
+    .accesscontents__access1__access1gazou
+      <img src="/assets/access1.jpg" class=image>
+    .accesscontents__access1__access1title
+      １、バスターミナル方面へ右
+  .accesscontents__access2
+    .accesscontents__access2__access2gazou
+      <img src="/assets/access2.jpg" class=image>
+    .accesscontents__access2__access2title
+      ２、バスターミナルを左
+  .accesscontents__access3
+    .accesscontents__access3__access3gazou
+      <img src="/assets/access3.jpg" class=image>
+    .accesscontents__access3__access3title
+      ３、バスターミナルを抜けて信号を右
+.accesscontents
+  .accesscontents__access4
+    .accesscontents__access4__access4gazou
+      <img src="/assets/access4.jpg" class=image>
+    .accesscontents__access4__access4title
+      ４、信号を渡り直進
+  .accesscontents__access5
+    .accesscontents__access5__access5gazou
+      <img src="/assets/access5.jpg" class=image>
+    .accesscontents__access5__access5title
+      ５、ビル沿いに直進
+  .accesscontents__access6
+    .accesscontents__access6__access6gazou
+      <img src="/assets/access6.jpg" class=image>
+    .accesscontents__access6__access6title
+      ６、公園の手前を右
+.accesscontents
+  .accesscontents__access7
+    .accesscontents__access7__access7gazou
+      <img src="/assets/access7.jpg" class=image>
+    .accesscontents__access7__access7title
+      ７、左手に塾が見えたら右
+  .accesscontents__access8
+    .accesscontents__access8__access8gazou
+      <img src="/assets/access8.jpg" class=image>
+    .accesscontents__access8__access8title
+      ８、左沿いの赤い看板が目印
+  .accesscontents__access9
+    .accesscontents__access9__access9gazou
+      <img src="/assets/access9.jpg" class=image>
+    .accesscontents__access9__access9title
+      ９、夜は赤提灯が灯っています
+
+
+
+.accesscontents
+  .accesscontents__left
+    <img src="/assets/map.png" class=image>
+  .accesscontents__right
+    .accesscontents__right__meisigazou
+      <img src="/assets/logo2.png" class=image>
+    .accesscontents__right__zyuusyo
+      〒553−0001
+      %br
+      大阪市福島区海老江１丁目３番11号
+      %br
+      大阪メトロ千日前線「野田阪神」駅４番出口
+      %br
+      JR東西線「海老江」駅１番出口
+      %br
+      阪神「野田」駅北側
+    .accesscontents__right__phonenumber
+      ご予約(06)6458−0230
+    .accesscontents__right__eigyouzikann
+      17時〜22時（ラストオーダー21時30分）
+      %br
+      水曜日定休（10月〜３月は不定休）
+
+
+.footer
+  .abc
+    .abc__abc
+      Copyright©︎ Chanko gottuan All Rights Reserved.
+      .abc__logo
+        = link_to "/" do
+          <img src="/assets/main-logo-pc.png" class=image>
+  .abcd
+    .abcd__abcd
+      TEL(06)-6458-1230
+    .abcd__abcde
+      = link_to "/access" do
+        RECRUIT
+
+
+
+
+
+:javascript
+    $(function(){
+      $(".tab1 .taboya").on("click", function() {
+      $(this).nextAll().slideToggle(100);
+      });
+    });
+    $(function(){
+      $(".tab1 .taboya").on("click", function() {
+      $(this).css('color', '#0000ff')
+      });
+    });
+    $('.tab1').hover(
+    function(){
+      $('.taboya').css();
+      },
+    function(){
+      $('.taboya').css('color', '');
+      }
+    );
+
+
+    $('.yasai').hover(
+    function(){
+      $('.yasai').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+
+      },
+    function(){
+      $('.yasai').css('background-color', '');
+      }
+    );
+    $('.sake').hover(
+    function(){
+      $('.sake').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.sake').css('background-color', '');
+      }
+    );
+    $('.dasi').hover(
+    function(){
+      $('.dasi').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.dasi').css('background-color', '');
+      }
+    );
+    $('.sime').hover(
+    function(){
+      $('.sime').css('background-color', '#f00');
+      $('.taboya').css('color', '#0000ff');
+      },
+    function(){
+      $('.sime').css('background-color', '');
+      }
+    );
+
+
+
+
+    $('.tab2').hover(
+      function(){
+        $('.tab2').children().show();
+        $('.tab2').css('color', '#0000ff');
+
+      },
+      function(){
+        $('.tab2').children().hide();
+        $('.tab2').css('color', '');
+
+      }
+    );
+
+    $('.tabkiti').hover(
+      function(){
+        $('.tabkiti').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabkiti').css('background-color', '');
+      }
+    );
+
+
+
+    $('.tabmi').hover(
+      function(){
+        $('.tabmi').children().show();
+        $('.tabmi').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabmi').css('background-color', '');
+        $('.tabchan1').hide();
+        $('.tabchan2').hide();
+        $('.tabchan3').hide();
+      }
+    );
+    $('.tabchan1').hover(
+      function(){
+        $('.tabchan1').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan1').css('background-color', '');
+      }
+    );
+    $('.tabchan2').hover(
+      function(){
+        $('.tabchan2').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan2').css('background-color', '');
+      }
+    );
+    $('.tabchan3').hover(
+      function(){
+        $('.tabchan3').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabchan3').css('background-color', '');
+      }
+    );
+
+
+    $('.tabjiro').hover(
+      function(){
+        $('.tabjiro').children().show();
+        $('.tabjiro').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabjiro').css('background-color', '');
+        $('.baki').hide();
+        $('.kaiou').hide();
+        $('.hanayama').hide();
+        $('.sibukawa').hide();
+
+      }
+    );
+    $('.baki').hover(
+      function(){
+        $('.baki').css('background-color', '#f00');
+      },
+      function(){
+        $('.baki').css('background-color', '');
+      }
+    );
+    $('.kaiou').hover(
+      function(){
+        $('.kaiou').css('background-color', '#f00');
+      },
+      function(){
+        $('.kaiou').css('background-color', '');
+      }
+    );
+    $('.hanayama').hover(
+      function(){
+        $('.hanayama').css('background-color', '#f00');
+      },
+      function(){
+        $('.hanayama').css('background-color', '');
+      }
+    );
+    $('.sibukawa').hover(
+      function(){
+        $('.sibukawa').css('background-color', '#f00');
+      },
+      function(){
+        $('.sibukawa').css('background-color', '');
+      }
+    );
+
+
+    $('.tabemon').hover(
+      function(){
+        $('.tabemon').children().show();
+        $('.tabemon').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabemon').css('background-color', '');
+        $('.tabta').hide();
+        $('.tabkachan').hide();
+        $('.jaian').hide();
+        $('.tabo').hide();
+        $('.tabsugikun').hide();
+      }
+    );
+    $('.tabta').hover(
+      function(){
+        $('.tabta').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabta').css('background-color', '');
+      }
+    );
+    $('.tabkachan').hover(
+      function(){
+        $('.tabkachan').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabkachan').css('background-color', '');
+      }
+    );
+    $('.jaian').hover(
+      function(){
+        $('.jaian').css('background-color', '#f00');
+      },
+      function(){
+        $('.jaian').css('background-color', '');
+      }
+    );
+    $('.tabo').hover(
+      function(){
+        $('.tabo').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabo').css('background-color', '');
+      }
+    );
+    $('.tabsugikun').hover(
+      function(){
+        $('.tabsugikun').css('background-color', '#f00');
+      },
+      function(){
+        $('.tabsugikun').css('background-color', '');
+      }
+    );

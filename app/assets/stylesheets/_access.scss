@@ -1,0 +1,397 @@
+
+.Aback{
+  width: 100%;
+  background-color: #c0a359;
+  .Aheader {
+    height: 11vh;
+    // background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(33, 30, 132);
+    a{
+      display: block;
+      text-decoration: none;
+    }
+    a:visited{
+      color: rgb(33, 30, 132);
+    }
+    a:link{
+      color: rgb(33, 30, 132);
+    }
+    &__top{
+      display: flex;
+      .logospace{
+        height: 13vh;
+        width: 25%;
+        a{
+          width: 0px;
+          height: 0px;
+        }
+        .image{
+          width: 85px;
+          height: 85px;
+          margin-left: 100px;
+          padding-top: 2px;
+        }
+      }
+      .kennsakumado{
+        text-align: center;
+        width: 50%;
+        margin-top: 0.5%;
+        &__omotikaeri{
+          height: 6vh;
+          width: 33.5vw;
+          text-align: center;
+          margin: 0 auto;
+          line-height: 6vh;
+          font-size: 30px;
+        }
+        .tel{
+          text-align: center;
+          font-size: 25px;
+        }
+    
+      }
+      .user{
+        // background-color: yellow;
+        margin-top: 0.5%;
+        text-align: center;
+        width: 25%;
+        .loginstatus{
+        }
+        .userinfo{
+          margin: 0 auto;
+          width: 120px;
+        }
+        .sinki{
+        }
+        .login{
+        }
+        .logout{
+          margin: 0 auto;
+          width: 100px;
+        }
+      }
+    }
+    &__tab{
+      padding-top: 2px;
+      height: 5vh;
+      line-height: 5vh;
+      display: flex;
+      .tab1{
+        width: 25%;
+        text-align: center;
+        cursor: pointer;
+        z-index: 100;
+      }
+        .taboya{
+          position: relative;
+        }
+        .tabko{
+          position: absolute;
+          top: 11vh;
+          width: 12.5%;
+          text-align: center;
+          display: none;
+          .dasi{
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+          .yasai{
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+          .sake{
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+          .sime{
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+        }
+
+        
+      .tab2{
+        width: 25%;
+        text-align: center;
+        z-index: 100;
+      }
+          .tabkiti{
+            background-color: rgba(255, 255, 255, 0.5);
+            display: none;
+            margin-top: 2px;
+          }
+
+          .tabmi{
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: none;
+          }
+              .tabchan1{
+                display: none;
+                width: 100%;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.5);
+                top: 0;
+                left: 100%;
+              }
+              .tabchan2{
+                display: none;
+                width: 100%;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.5);
+                top: 5vh;
+                left: 100%;
+              }
+              .tabchan3{
+                display: none;
+                width: 100%;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.5);
+                top: 10vh;
+                left: 100%;
+              }
+
+
+          .tabjiro{
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: none;
+          }
+              .baki{
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: 100%;
+                text-align:center;
+                display: none;
+                background-color: rgba(255, 255, 255, 0.5);
+              }
+              .kaiou{
+                position: absolute;
+                top: 5vh;
+                left: 100%;
+                width: 100%;
+                text-align: center;
+                display: none;
+                background-color: rgba(255, 255, 255, 0.5);
+              }
+              .hanayama{
+                position: absolute;
+                top: 10vh;
+                left: 100%;
+                width: 100%;
+                text-align: center;
+                display: none;
+                background-color: rgba(255, 255, 255, 0.5);
+              }
+              .sibukawa{
+                position: absolute;
+                top: 15vh;
+                left: 100%;
+                width: 100%;
+                text-align: center;
+                display: none;
+                background-color: rgba(255, 255, 255, 0.5);
+              }
+
+          .tabemon{
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: none;
+          }
+              .tabta{
+                display: none;
+                width: 100%;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.5);
+                top: 0;
+                left: 100%;
+              }
+              .tabkachan{
+                display: none;
+                width: 100%;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.5);
+                top: 5vh;
+                left: 100%;
+              }
+              .jaian{
+                display: none;
+                width: 100%;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.5);
+                top: 10vh;
+                left: 100%;
+              }
+              .tabo{
+                display: none;
+                width: 100%;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.5);
+                top: 15vh;
+                left: 100%;
+              }
+              .tabsugikun{
+                display: none;
+                width: 100%;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.5);
+                top: 20vh;
+                left: 100%;
+              }
+
+
+
+      .tab3{
+        width: 25%;
+        text-align: center;
+      }
+      .tab4{
+        width: 25%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+.accesstitle{
+  font-size: 40px;
+  text-align: center;
+  padding-top: 60px;
+  background-color: rgb(33, 30, 132);
+  color: white;
+}
+.accesscontents{
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  background-color: rgb(33, 30, 132);
+  color: white;
+  &__access1{
+    padding-right: 40px;
+    text-align: center;
+    &__access1gazou{
+
+    }
+    &__access1title{
+
+    }
+  }
+  &__access2{
+    padding-right: 40px;
+    text-align: center;
+
+    &__access2gazou{
+
+    }
+    &__access2title{
+      
+    }
+  }
+  &__access3{
+    text-align: center;
+
+    &__access3gazou{
+
+    }
+    &__access3title{
+      
+    }
+  }
+  &__access4{
+    padding-right: 40px;
+    padding-top: 40px;
+    text-align: center;
+
+    &__access4gazou{
+
+    }
+    &__access4title{
+      
+    }
+  }
+  &__access5{
+    padding-right: 40px;
+    padding-top: 40px;
+    text-align: center;
+
+    &__access5gazou{
+
+    }
+    &__access5title{
+      
+    }
+  }
+  &__access6{
+    padding-top: 40px;
+    text-align: center;
+
+    &__access6gazou{
+
+    }
+    &__access6title{
+      
+    }
+  }
+  &__access7{
+    padding-right: 40px;
+    padding-top: 40px;
+    text-align: center;
+
+    &__access7gazou{
+
+    }
+    &__access7title{
+      
+    }
+  }
+  &__access8{
+    padding-right: 40px;
+    padding-top: 40px;
+    text-align: center;
+
+    &__access8gazou{
+
+    }
+    &__access8title{
+      
+    }
+  }
+  &__access9{
+    padding-top: 40px;
+    text-align: center;
+
+    &__access9gazou{
+
+    }
+    &__access9title{
+      
+    }
+  }
+  &__left{
+    padding-bottom: 40px;
+  }
+  &__right{
+    padding-bottom: 40px;
+
+    &__meisigazou{
+      text-align: center;
+    }
+    &__zyuusyo{
+      font-size: 24px;
+      padding-left: 70px;
+    }
+    &__phonenumber{
+      font-size: 24px;
+      padding-left: 70px;
+
+    }
+    &__eigyouzikann{
+      font-size: 24px;
+      padding-left: 70px;
+
+    }
+  }
+}
