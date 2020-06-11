@@ -1,17 +1,53 @@
-.j
-  .a
-    ユーザー名
-    = @user.fname
-    = @user.lname
-    = @user.fnamekana
-    = @user.lnamekana
-  .b
-    メールアドレス
-    = current_user.email  
-  .c
-    年齢
-    = @user.age
-    .d
-      郵便番号
-      = @addresses.zipcode
-      
+.Uback
+  .ulogo
+    = link_to "/" do
+      <img src="/images/main-logo-pc.png" class=image>
+
+  .uinfotitle
+    会員情報
+
+  .uinfo
+    .uinfo__f1
+      .uinfo__f1__title
+        姓
+      .uinfo__f1__data
+        = @user.fname
+    .uinfo__l1
+      .uinfo__l1__title
+        名
+      .uinfo__l1__data
+        = @user.lname
+    .uinfo__f2
+      .uinfo__f2__title
+        姓（カナ）
+      .uinfo__f2__data
+        = @user.fnamekana
+    .uinfo__l2
+      .uinfo__l2__title
+        姓（カナ）
+      .uinfo__l2__data
+        = @user.lnamekana
+    .uinfo__email
+      .uinfo__email__title
+        メールアドレス
+      .uinfo__email__data
+        = current_user.email  
+    .uinfo__age
+      .uinfo__age__title
+        年齢
+      .uinfo__age__data
+        = @user.age
+    .uinfo__zipcode
+      .uinfo__zipcode__title
+        郵便番号
+      .uinfo__zipcode__data
+        = @addresses.zipcode
+
+
+
+
+
+
+
+
+

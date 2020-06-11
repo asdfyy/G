@@ -1,0 +1,145 @@
+.Uback{
+  width: 100%;
+  height: 821px;
+  background-image: url("/images/DSC_7865.jpeg");
+  background-size: 1500px 821px;
+  .ulogo{
+    .image{
+      width: 100px;
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+  }
+  .uinfotitle{
+    color: goldenrod;
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .uinfo{
+    color: goldenrod;
+    font-size: 22px;
+    border: goldenrod 1px solid;
+    width: 600px;
+    margin: 0 auto;
+    background-color: gray;
+    &__f1{
+      display: flex;
+      &__title{
+        border-right: goldenrod solid 1px;
+        border-bottom: goldenrod solid 1px;
+        width: 300px;
+        text-align: center;
+      }
+      &__data{
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+    }
+    &__l1{
+      display: flex;
+
+      &__title{
+        border-right: goldenrod solid 1px;
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+      &__data{
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+    }
+    &__f2{
+      display: flex;
+
+      &__title{
+        border-right: goldenrod solid 1px;
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+      &__data{
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+    }
+    &__l2{
+      display: flex;
+
+      &__title{
+        border-right: goldenrod solid 1px;
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+      &__data{
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+    }
+    &__email{
+      display: flex;
+
+      &__title{
+        border-right: goldenrod solid 1px;
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+      &__data{
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+    }
+    &__age{
+      display: flex;
+
+      &__title{
+        border-right: goldenrod solid 1px;
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+      &__data{
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+    }
+    &__zipcode{
+      display: flex;
+
+      &__title{
+        border-right: goldenrod solid 1px;
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+      &__data{
+        width: 300px;
+        text-align: center;
+        border-bottom: goldenrod solid 1px;
+
+      }
+    }
+
+  }
+}
