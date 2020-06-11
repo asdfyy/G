@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get "/drink" => "toppage#drink"
   get "/nomiho" => "toppage#nomiho"
   get "/access" => "toppage#access"
+  get "/test" => "toppage#test"
+
 end
 
 

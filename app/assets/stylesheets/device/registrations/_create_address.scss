@@ -1,0 +1,33 @@
+.signupcompletebg{
+  width: 1500px;
+  height: 821px;  
+  background-image: url("#{asset_path('DSC_7860.jpeg')}");
+  background-size: 1500px 821px;
+  &__title{
+    text-align: center;
+    font-size: 60px;
+    line-height: 410px;
+    color: white;
+  }
+  &__topbtn{
+    margin: 0 auto;
+    font-size: 14px;
+    border: rgb(33, 30, 132);
+    background-color: rgb(33, 30, 132);
+    color: white;
+    width: 320px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    a{
+      text-decoration: none;
+      display: block;
+    }
+    a:link{
+      color: white;
+    }
+    a:visited{
+      color: white;
+    }
+  }
+}

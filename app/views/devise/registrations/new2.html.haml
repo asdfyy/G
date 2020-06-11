@@ -1,26 +1,33 @@
-%h2 住所情報登録
+
+
 = form_for @address do |f|
   = render "devise/shared/error_messages", resource: @address
-  .field
-    = f.label :zipcode
-    %br/
-    = f.text_field :zipcode
-  .field
-    = f.label :prefecture
-    %br/
-    = f.text_field :prefecture
-  .field
-    = f.label :city
-    %br/
-    = f.text_field :city
-  .field
-    都道府県以下
-    %br/
-    = f.text_field :address
-  .field
-    = f.label :building
-    %br/
-    = f.text_field :building
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+  .signup2back
+    .signup2title
+      住所情報登録
+    .signup2C
+      .signup2error
+        = render "devise/shared/error_messages"
+      .signup2form
+        .signup2form__email
+          郵便番号
+        .signup2form__emailform
+          = f.text_field :zipcode, autofocus: true, class: "inputarea"
+        .signup2form__password
+          都道府県
+        .signup2form__passwordform
+          = f.text_field :prefecture, class: "inputarea"
+        .signup2form__repassword
+          市区町村
+        .signup2form__repasswordform
+          = f.text_field :city, class: "inputarea"
+        .signup2form__age
+          番地（任意）
+        .signup2form__ageform
+          = f.text_field :address, class: "nameinputarea"
+        .signup2form__phonenumber
+          建物名（任意）
+        .signup2form__phonenumberform
+          = f.text_field :building, class: "inputarea"
+        .signup2form__submit
+          = f.submit "登録", class: "registerbtn"

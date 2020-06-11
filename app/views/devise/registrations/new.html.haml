@@ -16,52 +16,52 @@
 -# = render "devise/shared/links"
 
 = form_for(@user, url: user_registration_path) do |f|
-  .signinback
+  .signupback
     .signuptitle
       ごっつ庵会員登録フォーム
     .signupC
       .signuperror
         = render "devise/shared/error_messages"
-      .signinform
-        .signinform__email
+      .signupform
+        .signupform__email
           メールアドレス
-        .signinform__emailform
+        .signupform__emailform
           = f.email_field :email, autofocus: true, class: "inputarea", autocomplete: "email"
-        .signinform__password
+        .signupform__password
           パスワード
-        .signinform__passwordform
+        .signupform__passwordform
           = f.password_field :password, class: "inputarea", autocomplete: "new-password"
-        .signinform__repassword
+        .signupform__repassword
           パスワード再入力
-        .signinform__repasswordform
+        .signupform__repasswordform
           = f.password_field :password_confirmation, class: "inputarea", autocomplete: "new-password"
-        .signinform__name
-          .signinform__fname
+        .signupform__name
+          .signupform__fname
             姓（漢字）
-            .signinform__fnameform
+            .signupform__fnameform
               = f.text_field :fname, class: "nameinputarea"
-          .signinform__lname
+          .signupform__lname
             名（漢字）
-            .signinform__lnameform
+            .signupform__lnameform
               = f.text_field :lname, class: "nameinputarea"
-        .signinform__namekana
-          .signinform__fnamekana
+        .signupform__namekana
+          .signupform__fnamekana
             姓（カナ）
-            .signinform__fnamekanaform
+            .signupform__fnamekanaform
               = f.text_field :fnamekana, class: "nameinputarea"
-          .signinform__lnamekana
+          .signupform__lnamekana
             名（カナ）
-            .signinform__lnamekanaform
+            .signupform__lnamekanaform
               = f.text_field :lnamekana, class: "nameinputarea"
-        .signinform__age
+        .signupform__age
           年齢
-        .signinform__ageform
+        .signupform__ageform
           = f.text_field :age, class: "inputarea"
-        .signinform__phonenumber
+        .signupform__phonenumber
           電話番号
-        .signinform__phonenumberform
+        .signupform__phonenumberform
           = f.text_field :phonenumber, class: "inputarea"
-        .signinform__submit
+        .signupform__submit
           = f.submit "次へ", class: "registerbtn"
 
 

@@ -4,32 +4,38 @@
 .nameinputarea{
   width: 200px;
 }
-.signinback{
+.signupback{
   width: 100%;
-  height: 820px;
-  background-image: url("#{asset_path('1on.jpg')}");
+  height: 821px;
+  background-image: url("#{asset_path('DSC_8009.jpeg')}");
+  background-size: 1500px 821px;
+  position: relative;
   .signuptitle{
-    text-align: center;
     font-size: 45px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 20px;
+    color: white;
 
   }
   .signupC{
-    display: flex;
-    justify-content: space-around;
+    position: absolute;
+    top: -70px;
+    left: 970px;
+    position: relative;
     .signuperror{
-
+      top: 90px;
+      left: -500px;
+      position: absolute;
+      color: white;
     }
-    .signinform{
+    .signupform{
       padding-top: 20px;
-      width: 30%;
+      width: 450px;
       height: 600px;
       background-color: gold;
       border-radius: 20px;
       font-size: 20px;
       text-align: center;
-      margin: 0 auto;
       filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
       &__email{
   
@@ -80,7 +86,6 @@
         }
       }
     }
-  
   }
 }
 
