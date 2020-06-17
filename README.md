@@ -15,7 +15,7 @@
 ・制作背景  
 　　私がこの店で働いていた時、店主が店舗HPが欲しいと言っていたため作ることにしました。  
 ・DEMO  
-
+G.wiki/images/92684a8b5c3aab13156a52943256ca49.jpg
 ・使用技術  
 　　言語：Ruby/Ruby on Rails　ツール:Visual Studio Code,Github　DB:MySQL　サーバー：AWS 
 ・課題や今後実装したい機能  
