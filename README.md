@@ -17,7 +17,7 @@
 ・DEMO  
 ![1c36e61b0b25963a7076e25ca545c2e0](https://user-images.githubusercontent.com/58731446/84861294-b02f2f80-b0ab-11ea-88e2-a0b11e3ca456.jpg)  
 ![b1c346d3c19570d7ec602e84e23449ad](https://user-images.githubusercontent.com/58731446/84861812-ddc8a880-b0ac-11ea-986e-63073a73b190.jpg)  
-![92684a8b5c3aab13156a52943256ca49](https://user-images.githubusercontent.com/58731446/84861426-fbe1d900-b0ab-11ea-80d5-a91a37e7201e.jpg)  
+![6f3aa22f2fa3e777ab9de32a0de46026](https://user-images.githubusercontent.com/58731446/84861396-e66caf00-b0ab-11ea-94c7-c8b4193c181e.jpg)  
 ・使用技術  
 　　言語：Ruby/Ruby on Rails　ツール:Visual Studio Code,Github　DB:MySQL　サーバー：AWS  
 ・課題や今後実装したい機能  
